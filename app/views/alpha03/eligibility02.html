@@ -6,9 +6,9 @@
 <main id="content" role="main">
   {{>includes/alpha-banner}}
   
-  <form action="eligibility02" method="#" class="form">
+  <form action="before-you-start" method="#" class="form">
 
-  <a href="apply" class="example-back-link">Back</a>
+  <a href="eligibilty01" class="example-back-link">Back</a>
 
   <h1 class="form-title heading-large">
     Eligibility
@@ -17,12 +17,13 @@
   <ul>
     <li>
       <fieldset class="inline form-group">
-        <legend class="form-label-bold add-padding" for="eligibility">Have you, a partner or an ex-partner been getting Income Support, Income-based Jobseeker's Allowance, Employment and Support Allowance or Pension Credit for the past 26 weeks?</legend>
-        <label class="block-label" data-target="is-eligible" for="eligibility-1">
+        <legend class="form-label-bold add-padding" for="eligibility">Are you involved in a trade dispute?</legend>
+        <p class="form-hint">Eg industrial action, a strike, walk out, lock-out or any other dispute about work.</p>
+        <label class="block-label" data-target="not-eligible" for="eligibility-1">
           <input id="eligibility-1" type="radio" name="eligibility" value="Yes">
           Yes
         </label>
-        <label class="block-label" data-target="not-eligible" for="eligibility-2">
+        <label class="block-label" data-target="is-eligible" for="eligibility-2">
           <input id="eligibility-2" type="radio" name="eligibility" value="No">
           No
         </label>
