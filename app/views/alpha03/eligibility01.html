@@ -1,0 +1,41 @@
+{{<layout}}
+
+{{$pageTitle}}Budgeting Loans{{/pageTitle}}
+
+{{$content}}
+<main id="content" role="main">
+  {{>includes/alpha-banner}}
+  
+  <form action="eligibility02" method="#" class="form">
+
+  <a href="apply" class="example-back-link">Back</a>
+
+  <h1 class="form-title heading-large">
+    Eligibility
+  </h1>
+
+  <ul>
+    <li>
+      <fieldset class="inline form-group">
+        <legend class="form-label-bold add-padding" for="eligibility">Do you have any children 15 or younger who live with you?</legend>
+        <label class="block-label" for="eligibility-1">
+          <input id="eligibility-1" type="radio" name="eligibility" value="Yes">
+          Yes
+        </label>
+        <label class="block-label" for="eligibility-2">
+          <input id="eligibility-2" type="radio" name="eligibility" value="No">
+          No
+        </label>
+      </fieldset>
+    </li>
+  </ul>
+  
+  <div class="form-group">
+    <input type="submit" class="button" value="Continue">
+  </div>
+
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{/layout}}
