@@ -246,3 +246,12 @@ label + textarea { margin-top:10px; }
     margin-bottom: 0.5em;
     color: #fff
 }
+
+legend {
+  white-space: normal;
+  width: 100%;
+}
+legend span {
+  width: 100%;
+  display: block;
+}
