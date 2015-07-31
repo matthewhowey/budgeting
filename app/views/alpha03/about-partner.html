@@ -29,7 +29,22 @@
 
   <div class="panel-indent js-hidden" id="partner-yes">
     <fieldset class="inline form-group">
-      <legend class="form-label-bold"><span>Does your partner get Income Support, Income-based Jobseekers Allowance, Income-based Employment and Support Allowance or Pension Credit?</span></legend>
+      <legend class="form-label-bold" for="partner-6months">Have you been with your partner for 6 months or more?</legend>
+      <label class="block-label" data-target="partner-yes2" for="months-1">
+      <input id="months-1" type="radio" name="partner-6months" value="Yes">
+      Yes
+    </label>
+    <label class="block-label" data-target="partner-no" for="months-2">
+      <input id="months-2" type="radio" name="partner-6months" value="No">
+      No
+    </label>
+  </fieldset>
+
+  </div>
+
+  <div class="panel-indent js-hidden" id="partner-yes2">
+    <fieldset class="inline form-group">
+      <legend class="form-label-bold"><span>Has your partner been getting Income Support, Income-based Jobseekers Allowance, Income-based Employment and Support Allowance or Pension Credit for the past 6 months?</span></legend>
       <label class="block-label" data-target="partner-details" for="radio-inline-3">
         <input id="radio-inline-3" type="radio" name="radio-inline-group2" value="Yes">
         Yes
@@ -71,7 +86,7 @@
 
 
     <fieldset class="form-group inline js-hidden" id="expartner">
-      <legend class="form-label-bold"><span>Does your ex-partner get Income Support, Income-based Jobseekers Allowance, Income-based Employment and Support Allowance or Pension Credit?</span></legend>
+      <legend class="form-label-bold"><span>Has your ex-partner been getting Income Support, Income-based Jobseekers Allowance, Income-based Employment and Support Allowance or Pension Credit for the past 6 months?</span></legend>
       <label class="block-label" data-target="expartner-details" for="radio-inline-7">
         <input id="radio-inline-7" type="radio" name="radio-inline-group3" value="Yes">
         Yes
