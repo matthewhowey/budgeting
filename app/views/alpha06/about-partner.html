@@ -11,25 +11,29 @@
   <a href="before-you-start" class="example-back-link">Back</a>
 
   <h1 class="form-title heading-large">
-    About a partner
+    About your benefits
   </h1>
 
   <fieldset class="inline form-group">
-    <legend class="form-label-bold" for="partner">Do you currently have a partner?</legend>
-    <p class="form-hint">A partner is someone you are married to, a civil partner or someone you are living with as though you are married or in a civil partnership.</p>
-    <label class="block-label" data-target="partner-yes" for="radio-inline-1">
-      <input id="radio-inline-1" type="radio" name="partner" value="Yes">
+    <legend class="form-label-bold" for="benefit">Have you been getting one of the following benefits for the past 6 months??</legend>
+    <p class="form-hint">Income Support, Income-based Jobseeker's Allowance, Employment and Support Allowance or Pension Credit</p>
+    <label class="block-label" data-target="benefit-yes" for="radio-inline-1">
+      <input id="radio-inline-1" type="radio" name="benefit" value="Yes">
       Yes
     </label>
-    <label class="block-label" data-target="partner-no" for="radio-inline-2">
-      <input id="radio-inline-2" type="radio" name="partner" value="No">
+    <label class="block-label" data-target="benefit-no" for="radio-inline-2">
+      <input id="radio-inline-2" type="radio" name="benefit" value="No">
       No
     </label>
   </fieldset>
 
-  <div class="form-group">
-      <input type="submit" class="button" value="Continue"> 
-    </div>
+  <div class="js-hidden form-group" id="benefit-yes">
+    <a href="children" class="button">Continue</a>
+  </div>
+
+  <div class="js-hidden form-group" id="benefit-no">
+    <a href="partner-details" class="button">Continue</a> 
+  </div>
 
 </main><!-- / #page-container -->
 {{/content}}
