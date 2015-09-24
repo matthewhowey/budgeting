@@ -6,7 +6,7 @@
 <main id="content" role="main">
   {{>includes/alpha-banner}}
   
-  <form action="children-no-partner" method="#" class="form">
+  <form action="children" method="#" class="form">
 
   <a href="about-benefit" class="example-back-link">Back</a>
 
@@ -58,13 +58,25 @@
     </div>
 
     <fieldset class="inline form-group">
-      <legend class="form-label-bold" for="current">Have you had any other partners in the past 6 months who have claimed one of the above benefits?</legend>
+      <legend class="form-label-bold" for="current">Is this your current partner?</legend>
       <label class="block-label" for="radio-inline-7">
         <input id="radio-inline-7" type="radio" name="current" value="Yes">
         Yes
       </label>
       <label class="block-label" for="radio-inline-8">
         <input id="radio-inline-8" type="radio" name="current" value="No">
+        No
+      </label>
+    </fieldset>
+
+    <fieldset class="inline form-group">
+      <legend class="form-label-bold" for="current">Have you had any other partners in the last 6 months?</legend>
+      <label class="block-label" for="radio-inline-9">
+        <input id="radio-inline-9" type="radio" name="current" value="Yes">
+        Yes
+      </label>
+      <label class="block-label" for="radio-inline-10">
+        <input id="radio-inline-10" type="radio" name="current" value="No">
         No
       </label>
     </fieldset>
