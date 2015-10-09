@@ -14,7 +14,19 @@
     Debt repayment details
   </h1>
 
-  <div 
+ <fieldset class="inline form-group">
+    <legend class="form-label-bold" for="debt">Are you making any other debt repayments?</legend>
+    <label class="block-label" data-target="money-owed01" for="radio-inline-1">
+      <input id="radio-inline-1" type="radio" name="debt" value="Yes">
+      Yes
+    </label>
+    <label class="block-label" for="radio-inline-2">
+      <input id="radio-inline-2" type="radio" name="debt" value="No">
+      No
+    </label>
+  </fieldset>
+
+  <div class="panel-indent js-hidden" id="money-owed01">
     <div class="form-group">
       <label class="form-label-bold" for="who01">Who do you make the repayment to?</label>
       <input class="form-control" id="who01" type="text">
@@ -42,7 +54,7 @@
       <label class="form-label-bold" for="total01">How much do you owe on this debt in total?</label>
       <input class="form-control" id="total01" type="text">
     </div>
-
+  </div>
     <!--p><a href="#" id="show-payment2">Add another payment</a></p-->
 
   <div class="form-group">
