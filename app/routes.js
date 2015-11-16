@@ -100,6 +100,9 @@ module.exports = {
         }
     })
 
+
+
+
     //beta02
     app.post('/beta02/about-benefit', function (req, res) {
         if (req.body.benefit === 'Yes') {
@@ -135,7 +138,7 @@ module.exports = {
 
     app.post('/beta02/children-no-partner', function (req, res) {
         if (req.body.children === 'Yes') {
-            res.redirect('/beta02/loan-amount-child')
+            res.redirect('/beta02/loan-amount-child-single')
         } else {
             res.redirect('/beta02/loan-amount-single')
         }
