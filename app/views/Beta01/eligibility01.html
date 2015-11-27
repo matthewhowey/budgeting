@@ -4,11 +4,11 @@
 
 {{$content}}
 <main id="content" role="main">
-  {{>includes/beta-banner}}
+  {{>includes/alpha-banner}}
   
-  <form action="before-you-start" method="#" class="form">
+  <form action="eligibility02" method="#" class="form">
 
-  <a href="eligibilty01" class="example-back-link">Back</a>
+  <a href="apply" class="example-back-link">Back</a>
 
   <h1 class="form-title heading-large">
     Eligibility
@@ -17,13 +17,18 @@
   <ul>
     <li>
       <fieldset class="inline form-group">
-        <legend class="form-label-bold add-padding" for="eligibility">Are you involved in a trade dispute?</legend>
-        <p class="form-hint">This includes industrial action, a strike, walk out, lock-out or any other dispute about work.</p>
-        <label class="block-label" data-target="not-eligible" for="eligibility-1">
+        <legend class="form-label-bold add-padding" for="eligibility"><span>Have you, a partner or an ex-partner been getting one of the following benefits for the past 6 months?</span></legend>
+        <ul class="list-bullet">
+          <li>Income Support
+          <li>Income-based Jobseeker's Allowance</li>
+          <li>Income Related Employment Support Allowance</li>
+          <li>Pension Credit</li>
+        </ul>
+        <label class="block-label" data-target="is-eligible" for="eligibility-1">
           <input id="eligibility-1" type="radio" name="eligibility" value="Yes">
           Yes
         </label>
-        <label class="block-label" data-target="is-eligible" for="eligibility-2">
+        <label class="block-label" data-target="not-eligible" for="eligibility-2">
           <input id="eligibility-2" type="radio" name="eligibility" value="No">
           No
         </label>
