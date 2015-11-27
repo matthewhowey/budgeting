@@ -103,8 +103,8 @@ module.exports = {
 
 
 
-    //beta02
-    app.post('/beta02/about-benefit', function (req, res) {
+    //MVPv01
+    app.post('/MVPv01/about-benefit', function (req, res) {
         if (req.body.benefit === 'Yes') {
             res.redirect('/beta02/partner')
         } else {
@@ -112,7 +112,7 @@ module.exports = {
         }
     })
 
-    app.post('/beta02/partner', function (req, res) {
+    app.post('/MVPv01/partner', function (req, res) {
         if (req.body.partner === 'Yes') {
             res.redirect('/beta02/partner-yes')
         } else {
@@ -120,7 +120,7 @@ module.exports = {
         }
     })
 
-    app.post('/beta02/money-you-owe', function (req, res) {
+    app.post('/MVPv01/money-you-owe', function (req, res) {
         if (req.body.partner === 'Yes') {
             res.redirect('/beta02/debt-repayment')
         } else {
@@ -128,7 +128,7 @@ module.exports = {
         }
     })
 
-    app.post('/beta02/children', function (req, res) {
+    app.post('/MVPv01/children', function (req, res) {
         if (req.body.children === 'Yes') {
             res.redirect('/beta02/loan-amount-child')
         } else {
@@ -136,13 +136,15 @@ module.exports = {
         }
     })
 
-    app.post('/beta02/children-no-partner', function (req, res) {
+    app.post('/MVPv01/children-no-partner', function (req, res) {
         if (req.body.children === 'Yes') {
             res.redirect('/beta02/loan-amount-child-single')
         } else {
             res.redirect('/beta02/loan-amount-single')
         }
     })
+
+    
 
 
   }
