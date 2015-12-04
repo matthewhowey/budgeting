@@ -142,6 +142,48 @@ module.exports = {
         }
     })
 
+    //beta03
+
+ app.post('/beta03/about-benefit', function (req, res) {
+        if (req.body.benefit === 'Yes') {
+            res.redirect('/beta03/partner')
+        } else {
+            res.redirect('/beta03/overview')
+        }
+    })
+
+    app.post('/beta03/partner', function (req, res) {
+        if (req.body.partner === 'Yes') {
+            res.redirect('/beta03/partner-yes')
+        } else {
+            res.redirect('/beta03/partner-no')
+        }
+    })
+
+    app.post('/beta03/money-you-owe', function (req, res) {
+        if (req.body.partner === 'Yes') {
+            res.redirect('/beta03/debt-repayment')
+        } else {
+            res.redirect('/beta03/personal-details')
+        }
+    })
+
+    app.post('/beta02/children', function (req, res) {
+        if (req.body.children === 'Yes') {
+            res.redirect('/beta03/loan-amount-child')
+        } else {
+            res.redirect('/beta03/loan-amount-partner')
+        }
+    })
+
+    app.post('/beta03/children-no-partner', function (req, res) {
+        if (req.body.children === 'Yes') {
+            res.redirect('/beta03/loan-amount-child')
+        } else {
+            res.redirect('/beta03/loan-amount-single')
+        }
+    })
+
 
     //MVPv01
     app.post('/MVPv01/about-benefit', function (req, res) {
