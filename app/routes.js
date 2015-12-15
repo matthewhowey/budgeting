@@ -168,7 +168,7 @@ module.exports = {
         }
     })
 
-    app.post('/beta02/children', function (req, res) {
+    app.post('/beta03/children', function (req, res) {
         if (req.body.children === 'Yes') {
             res.redirect('/beta03/loan-amount-child')
         } else {
