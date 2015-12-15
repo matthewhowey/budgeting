@@ -5,31 +5,36 @@
 {{$content}}
 <main id="content" role="main">
   {{>includes/beta-banner}}
-  <div class="grid-row">
-    <div class="column-two-thirds">
-  
-      <form action="money-you-owe-single" method="#" class="form">
 
-      <a href="children" class="example-back-link">Back</a>
-      <div class="form-group">
-        <h1 class="form-title heading-large">
-          <label class="" for="loan-amount">How much do you need?</label>
-        </h1>
+  <form action="money-you-owe-single" method="#" class="form">
 
-        <p class="lede ">You can apply for an amount between £100 and £812.</p>
+    <div class="grid-row">
+      <div class="column-two-thirds">
+    
+        <a href="children" class="example-back-link">Back</a>
+        
+        <div class="form-group">
+          <h1 class="form-title heading-large">
+            <label class="" for="loan-amount">How much do you need?</label>
+          </h1>
 
-        <span>£ </span> <input class="form-control-1-8" id="partner-nino" type="text">
+          <p class="lede ">You can apply for an amount between £100 and £812.</p>
+
+          <span>£ </span> <input class="form-control-1-8" id="partner-nino" type="text">
+        </div>
+        
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
       </div>
-      
-      <div class="form-group">
-        <input type="submit" class="button" value="Continue">
+      <div class="column-third">
+        <p>&nbsp;</p>
       </div>
 
     </div>
-    <div class="column-third">
-    </div>
-  </div>
 
+  </form>  
 
 </main><!-- / #page-container -->
 {{/content}}
