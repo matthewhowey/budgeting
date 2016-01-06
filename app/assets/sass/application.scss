@@ -264,7 +264,6 @@ legend span {
 }
 
 .styled-select select {
-   /*background: #fff;*/
    width: 168px;
    padding: 3px;
    font-size: 16px;
@@ -272,13 +271,14 @@ legend span {
    border: 0;
    border-radius: 0;
    height: 38px;
-   -webkit-appearance: none;
+   display: inline-block;
+   background: #fff url("/public/images/down_arrow_select.jpg") no-repeat right;
+   -webkit-appearance: none /* menulist-button */;
    }
 
    .styled-select {
    width: 140px;
    height: 34px;
    overflow: hidden;
-   background: #fff url("/public/images/down_arrow_select.jpg") no-repeat right;
    border: 1px solid $border-colour;
    }
