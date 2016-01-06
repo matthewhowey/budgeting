@@ -1,0 +1,54 @@
+
+
+{{<layout}}
+
+{{$pageTitle}}Apply for a Budgeting Loan{{/pageTitle}}
+
+{{$content}}
+<main id="content" role="main">
+  {{>includes/beta-banner}}
+
+  <form action="less-then-100" method="post" class="form">
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <a href="before-you-start" class="example-back-link">Back</a>
+
+        <fieldset class="inline form-group">
+          <h1 class="form-title heading-large"><legend for="benefit">Do you want to borrow less than £100?</legend></h1>
+          
+          <label class="block-label" for="radio-inline-1">
+            <input id="radio-inline-1" type="radio" name="less-than-yes" value="Yes">
+            Yes
+          </label>
+          <label class="block-label" data-target="less-than-no" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="benefit" value="No">
+            No
+          </label>
+        </fieldset>
+
+        <div class="js-hidden" id="less-than-yes">
+          <div class="panel-indent">
+            <p>You cannot borrow less than £100. Visit Money Advice Service for help with managing your budget.</p>
+          </div>
+        </div>
+
+        <div class=" form-group" id="less-than-no">
+          <input type="submit" class="button" value="Continue">
+        </div>        
+      </div>
+
+      <div class="column-third">
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+  </form>  
+  
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{/layout}}
+
