@@ -160,7 +160,7 @@ module.exports = {
         }
     })
 
-    app.post('/beta03/money-you-owe', function (req, res) {
+    app.post('/beta03/debt-repayments-partner', function (req, res) {
         if (req.body.partner === 'Yes') {
             res.redirect('/beta03/debt-repayment')
         } else {
@@ -178,7 +178,7 @@ module.exports = {
 
     app.post('/beta03/children-no-partner', function (req, res) {
         if (req.body.children === 'Yes') {
-            res.redirect('/beta03/loan-amount-child')
+            res.redirect('/beta03/loan-amount-child-single')
         } else {
             res.redirect('/beta03/loan-amount-single')
         }
