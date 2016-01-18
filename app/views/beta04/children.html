@@ -16,11 +16,16 @@
           
           <ul>
             <li>
-              <fieldset class="inline form-group">
+              <fieldset class="inline form-group" id="children-container">
                 <h1 class="form-title heading-large"><legend for="children">Do you or your partner get Child Benefit?</legend>
                 </h1>  
                 <label class="block-label" data-target="live-with" for="children-1">
-                  <input id="children-1" type="radio" name="children" value="Yes">
+                  <input id="children-1" type="radio" name="children" value="Yes"
+                    required
+                    data-parsley-errors-container="#children-container"
+                    data-parsley-class-handler="#children-container"
+                    data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you get Child Benefit"
+                  >
                   Yes
                 </label>
                 <label class="block-label" for="children-2">
