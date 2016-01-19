@@ -187,6 +187,14 @@ module.exports = {
 
 //beta04
 
+ app.post('/beta04/less-than-100', function (req, res) {
+        if (req.body.lt100 === 'No') {
+            res.redirect('/beta04/about-benefit')
+        } else {
+            res.redirect('/beta04/overview')
+        }
+    })
+
  app.post('/beta04/about-benefit', function (req, res) {
         if (req.body.benefit === 'Yes') {
             res.redirect('/beta04/partner')
