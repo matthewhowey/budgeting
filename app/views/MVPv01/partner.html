@@ -14,11 +14,17 @@
     About a partner
   </h1>
 
-  <fieldset class="inline form-group">
+  <fieldset class="inline form-group" id="partner-container">
     <legend class="form-label-bold" for="partner">Do you currently have a partner?</legend>
     <p class="form-hint">A partner is a person you are married to or a person you live with as if you are married to them.</p>
+    <div id="partner-error-container"></div>
     <label class="block-label" for="radio-inline-1">
-      <input id="radio-inline-1" type="radio" name="partner" value="Yes">
+      <input id="radio-inline-1" type="radio" name="partner" value="Yes"
+        required
+        data-parsley-errors-container="#partner-error-container"
+        data-parsley-class-handler="#partner-container"
+        data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you have a partner"
+      >
       Yes
     </label>
     <label class="block-label" for="radio-inline-2">
