@@ -191,7 +191,7 @@ module.exports = {
         if (req.body.lt100 === 'No') {
             res.redirect('/beta04/about-benefit')
         } else {
-            res.redirect('/beta04/overview')
+            res.redirect('/beta04/about-benefit')
         }
     })
 
