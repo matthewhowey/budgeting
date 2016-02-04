@@ -287,3 +287,11 @@ legend span {
     width: 100%;
    }
 
+   .u-input-25 {
+    width: 100% !important;
+
+    @include media(tablet) {
+        width: 50% !important;
+      }
+   }
+
