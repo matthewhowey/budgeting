@@ -294,4 +294,10 @@ legend span {
         width: 50% !important;
       }
    }
-
+.warning {
+  display: block;
+  background-color: #fef7f7;
+  border: 3px solid #af1324;
+  padding: 15px;
+  margin-bottom: 30px
+}
