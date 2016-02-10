@@ -16,7 +16,7 @@
         <a href="less-than-100" class="example-back-link">Back</a>
 
         <fieldset class="inline form-group" id="benefit-container">
-          <h1 class="form-title heading-xlarge"><legend for="benefit">Have you been getting one of the following benefits for the past 6 months?</legend></h1>
+          <h1 class="form-title heading-large"><legend for="benefit">Have you been getting one of the following benefits for the past 6 months?</legend></h1>
           <ul class="list-bullet" text="medium">
             <li>Income Support</li>
             <li>Income-based Jobseeker's Allowance</li>
@@ -38,11 +38,18 @@
           </label>
         </fieldset>
 
-        <div class="js-hidden" id="benefit-no">
+        <div class="form-group js-hidden warning" id="benefit-no">
+
+          <h2 class="heading-small">If you have not been getting one of the benefits listed you will not be eligible to apply for a Budgeting Loan</h2>
+          <p><a href="https://www.gov.uk/find-your-local-council">Contact your local council</a> for information about emergency loans.</p>
+
+        </div>
+
+        <!-- <div class="js-hidden" id="benefit-no">
           <div class="panel-indent">
             <p>If you do not claim the benefits listed you will not be eligible to apply for a Budgeting Loan. For information on loans <a href="https://www.gov.uk/find-your-local-council">contact your Local Council</a> </p>
           </div>
-        </div>
+        </div> -->
 
         <div class=" form-group" id="benefit-yes">
           <input type="submit" class="button" value="Continue">
