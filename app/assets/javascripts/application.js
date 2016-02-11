@@ -1,4 +1,4 @@
-function ShowHideContent() {
+ffunction ShowHideContent() {
   var self = this;
   self.showHideRadioToggledContent = function () {
     $(".block-label input[type='radio']").each(function () {
@@ -123,5 +123,33 @@ $(document).ready(function() {
   var toggleContent = new ShowHideContent();
   toggleContent.showHideRadioToggledContent();
   toggleContent.showHideCheckboxToggledContent();
+
+
+  $("#show-debt2").click(function(e) {
+    e.preventDefault();
+    $("#debt2").removeClass("js-hidden");
+  });
+  $("#show-debt3").click(function(e) {
+    e.preventDefault();
+    $("#debt3").removeClass("js-hidden");
+  });
+  $("#show-debt4").click(function(e) {
+    e.preventDefault();
+    $("#debt4").removeClass("js-hidden");
+  });
+
+  $("#remove-debt2").click(function (e) {
+    e.preventDefault();
+    $("#debt2").addClass("js-hidden");
+  });
+  $("#remove-debt3").click(function (e) {
+    e.preventDefault();
+    $("#debt3").addClass("js-hidden");
+  });
+
+  $("#remove-debt4").click(function (e) {
+    e.preventDefault();
+    $("#debt4").addClass("js-hidden");
+  });
 
 });
