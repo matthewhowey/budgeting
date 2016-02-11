@@ -1,4 +1,4 @@
-ffunction ShowHideContent() {
+function ShowHideContent() {
   var self = this;
   self.showHideRadioToggledContent = function () {
     $(".block-label input[type='radio']").each(function () {
@@ -123,6 +123,7 @@ $(document).ready(function() {
   var toggleContent = new ShowHideContent();
   toggleContent.showHideRadioToggledContent();
   toggleContent.showHideCheckboxToggledContent();
+
 
 
   $("#show-debt2").click(function(e) {
