@@ -1,0 +1,105 @@
+{{<layout}}
+
+{{$pageTitle}}Apply for a Budgeting Loan{{/pageTitle}}
+
+{{$content}}
+<main id="content" role="main">
+  {{>includes/beta-banner}}
+
+  <form action="about-benefit-esa" method="post" class="form">
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <a href="about-benefit-income-support" class="example-back-link">Back</a>
+
+        <ul>
+            <li>
+              <fieldset class="inline form-group" id="jsa-container">
+                <h1 class="form-title heading-large"><legend for="jsa">Do you get Jobseekers Allowance?</legend>
+                </h1>  
+                <label class="block-label" data-target="jsa" for="jsa-1">
+                  <input id="jsa-1" type="radio" name="jsa" value="Yes"
+                    required
+                    data-parsley-errors-container="#jsa-container"
+                    data-parsley-class-handler="#jsa-container"
+                    data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you get Jobseekers Allowance"
+                  >
+                  Yes
+                </label>
+                <label class="block-label" for="jsa-2">
+                  <input id="jsa-2" type="radio" name="jsa" value="No">
+                  No
+                </label>
+              </fieldset>
+            </li>
+          </ul>
+
+          <div class="js-hidden panel-indent" id="jsa">
+            <div class="form-group">
+              <fieldset class="inline form-group" id="jsa-type-container">
+                <h1 class="form-title heading-medium"><legend for="jsa-type">Which type of Jobseekers Allowance do you get?</legend>
+                </h1>  
+                <label class="block-label" data-target="jsa-type" for="jsa-type-1">
+                  <input id="jsa-type-1" type="radio" name="jsa-type" value="Income"
+                    required
+                    data-parsley-errors-container="#jsa-type-container"
+                    data-parsley-class-handler="#jsa-type-container"
+                    data-parsley-error-message="Select the type of Jobseekers Allowance you get"
+                  >
+                  Income related
+                </label>
+                <label class="block-label" for="jsa-type-2">
+                  <input id="jsa-type-2" type="radio" name="jsa-type" value="Contribution">
+                  Contribution based
+                </label>
+                <label class="block-label" for="jsa-type-"3>
+                  <input id="jsa-type-3" type="radio" name="jsa-type" value="Unsure">
+                  I'm not sure
+                </label>
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="js-hidden panel-indent" id="jsa-type">
+            <div class="form-group">
+              <fieldset class="inline form-group" id="jsa-length-container">
+                <h1 class="form-title heading-medium"><legend for="jsa-length">How long have you been getting income related Jobseekers Allowance?</legend>
+                </h1>  
+                <label class="block-label" data-target="jsa-length" for="jsa-length-1">
+                  <input id="jsa-length-1" type="radio" name="jsa-length" value="over6"
+                    required
+                    data-parsley-errors-container="#jsa-length-container"
+                    data-parsley-class-handler="#jsa-length-container"
+                    data-parsley-error-message="Select you time spent claiming the benefit"
+                  >
+                  Over 6 months
+                </label>
+                <label class="block-label" for="jsa-length-2">
+                  <input id="jsa-length-2" type="radio" name="jsa-length" value="under6">
+                  Under 6 months
+                </label>
+                
+              </fieldset>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <input type="submit" class="button" value="Continue">
+          </div>
+
+        
+      </div>
+
+      <div class="column-third">
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+  </form>  
+  
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{/layout}}

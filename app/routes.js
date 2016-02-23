@@ -343,13 +343,13 @@ app.post('/eligibilityV1/less-than-100', function (req, res) {
         }
     })
 
- app.post('/eligibilityV1/about-benefit', function (req, res) {
+    app.post('/eligibilityV1/about-benefit', function (req, res) {
         if (req.body.benefit === 'Yes') {
             res.redirect('/eligibilityV1/partner')
         } else {
             res.redirect('/eligibilityV1/overview')
         }
-    })
+    }) 
 
     app.post('/eligibilityV1/partner', function (req, res) {
         if (req.body.partner === 'Yes') {
