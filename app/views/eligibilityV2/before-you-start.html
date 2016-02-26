@@ -19,6 +19,8 @@
           <h1 class="form-title heading-medium">
             <legend for="less-then-100">Do you need to borrow more than £100?</legend>
           </h1>  
+          <div ="less-than-100-error-container"> </div>
+         <div class="form-group">
           <label class="block-label" for="radio-inline-1">
             <input id="radio-inline-1" type="radio" name="less-than-100" value="Yes"
               required
@@ -32,12 +34,12 @@
             <input id="radio-inline-2" type="radio" name="less-than-100" value="No">
             No
           </label>
-       
+        </div>
        
           <h1 class="form-title heading-medium">
-            <legend for="benefit">Have you been getting income-based Jobseeker's Allowance, income-related Employment and Support Allowance, Income Support or Pension Credit for the last 6 months?</legend>
+            <legend for="benefit">Have you been getting income-based Jobseeker's Allowance, income-related Employment and Support Allowance, Income Support or Pension Credit for the past 6 months?</legend>
           </h1>  
-         
+         <div class="form-group">
           <label class="block-label" for="radio-inline-1">
             <input id="radio-inline-1" type="radio" name="benefit" value="Yes"
               required
@@ -51,10 +53,11 @@
             <input id="radio-inline-2" type="radio" name="benefit" value="No">
             No
           </label>
-        
+        </div>
           <h1 class="form-title heading-medium">
-            <legend for="owe-social-fund">Do you owe the Social Fund more than £1500 for a Crisis Loan or Budgetng Loan?</legend>
+            <legend for="owe-social-fund">Do you owe the Social Fund more than £1,500 for a Crisis Loan or Budgetng Loan?</legend>
           </h1>  
+          <div class="form-group">
           <label class="block-label" for="radio-inline-1">
             <input id="radio-inline-1" type="radio" name="owe-social-fund" value="Yes"
               required
@@ -68,10 +71,12 @@
             <input id="radio-inline-2" type="radio" name="owe-social-fund" value="No">
             No
           </label>
+        </div>
 
           <h1 class="form-title heading-medium">
             <legend for="savings">Do you or your partner have combined savings of more than £1,000 (£2,000 if either of you are over 61)?</legend>
           </h1>  
+          <div class="form-group">
           <label class="block-label" for="radio-inline-1">
             <input id="radio-inline-1" type="radio" name="savings" value="Yes"
               required
@@ -85,10 +90,12 @@
             <input id="radio-inline-2" type="radio" name="savings" value="No">
             No
           </label>
+        </div>
 
           <h1 class="form-title heading-medium">
             <legend for="industrial-action">Are you involved in any industrial action (eg a strike, walk-out or lock-out)?</legend>
           </h1>  
+          <div class="form-group">
           <label class="block-label" for="radio-inline-1">
             <input id="radio-inline-1" type="radio" name="industrial-action" value="Yes"
               required
@@ -102,11 +109,16 @@
             <input id="radio-inline-2" type="radio" name="industrial-action" value="No">
             No
           </label>
+        </div>
+
 
         </fieldset>
 
-    
+     <div class="form-group js-hidden warning" id="less-than-100-no" >
 
+          <h2 class="heading-small">You're not eligible for a Budgeting Loan.</h2>
+          <p><a href="https://www.gov.uk/contact-jobcentre-plus">Contact Jobcentre Plus</a> for information about your benefit.</p>
+       </div>   
       
       <div class="form-group">
         <input type="submit" class="button" value="Submit"> 
