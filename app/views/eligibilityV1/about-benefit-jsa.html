@@ -6,7 +6,7 @@
 <main id="content" role="main">
   {{>includes/beta-banner}}
 
-  <form action="about-benefit-esa" method="post" class="form">
+  <form method="post" class="form">
 
     <div class="grid-row">
 
@@ -16,8 +16,8 @@
         <ul>
             <li>
               <fieldset class="inline form-group" id="jsa-container">
-                <h1 class="form-title heading-large"><legend for="jsa">Do you get Jobseekers Allowance?</legend>
-                </h1>  
+                <h1 class="form-title heading-large"><legend>Do you get Jobseekers Allowance?</legend>
+                </h1>
                 <label class="block-label" data-target="jsa" for="jsa-1">
                   <input id="jsa-1" type="radio" name="jsa" value="Yes"
                     required
@@ -38,11 +38,10 @@
           <div class="js-hidden panel-indent" id="jsa">
             <div class="form-group">
               <fieldset class="inline form-group" id="jsa-type-container">
-                <h1 class="form-title heading-medium"><legend for="jsa-type">Which type of Jobseekers Allowance do you get?</legend>
-                </h1>  
+                <h1 class="form-title heading-medium"><legend>Which type of Jobseekers Allowance do you get?</legend>
+                </h1>
                 <label class="block-label" data-target="jsa-type" for="jsa-type-1">
-                  <input id="jsa-type-1" type="radio" name="jsa-type" value="Income" 
-                    required
+                  <input id="jsa-type-1" type="radio" name="jsa-type" value="Income"
                     data-parsley-errors-container="#jsa-type-container"
                     data-parsley-class-handler="#jsa-type-container"
                     data-parsley-error-message="Select the type of Jobseekers Allowance you get"
@@ -71,10 +70,9 @@
             <div class="form-group">
               <fieldset class="inline form-group" id="jsa-length-container">
                 <h1 class="form-title heading-medium"><legend for="jsa-length">How long have you been getting income related Jobseekers Allowance?</legend>
-                </h1>  
+                </h1>
                 <label class="block-label" data-target="jsa-length" for="jsa-length-1">
                   <input id="jsa-length-1" type="radio" name="jsa-length" value="over6"
-                    required
                     data-parsley-errors-container="#jsa-length-container"
                     data-parsley-class-handler="#jsa-length-container"
                     data-parsley-error-message="Select you time spent claiming the benefit"
@@ -85,7 +83,7 @@
                   <input id="jsa-length-2" type="radio" name="jsa-length" value="under6">
                   Under 6 months
                 </label>
-                
+
               </fieldset>
             </div>
           </div>
@@ -94,7 +92,7 @@
             <input type="submit" class="button" value="Continue">
           </div>
 
-        
+
       </div>
 
       <div class="column-third">
@@ -102,8 +100,8 @@
       </div>
 
     </div>
-  </form>  
-  
+  </form>
+
 
 </main><!-- / #page-container -->
 {{/content}}

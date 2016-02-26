@@ -8,7 +8,7 @@
 <main id="content" role="main">
   {{>includes/beta-banner}}
 
-  <form action="about-benefit-income-support" method="post" class="form">
+  <form method="post" class="form">
 
     <div class="grid-row">
 
@@ -19,7 +19,7 @@
             <li>
               <fieldset class="inline form-group" id="pension-credit-container">
                 <h1 class="form-title heading-large"><legend for="pension-credit">Do you get Pension Credit?</legend>
-                </h1>  
+                </h1>
                 <label class="block-label" data-target="pension-credit" for="pension-credit-1">
                   <input id="pension-credit-1" type="radio" name="pension-credit" value="Yes"
                     required
@@ -41,10 +41,9 @@
             <div class="form-group">
               <fieldset class="inline form-group" id="pc-how-long-container">
                 <h1 class="form-title heading-medium"><legend for="pc-how-long">Have you been getting Pension Credit for the past 6 months?</legend>
-                </h1>  
+                </h1>
                 <label class="block-label" data-target="pc-how-long" for="pc-how-long-1">
                   <input id="pc-how-long-1" type="radio" name="pc-how-long" value="Yes"
-                    required
                     data-parsley-errors-container="#pc-how-long-container"
                     data-parsley-class-handler="#pc-how-long-container"
                     data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you have been getting Pension Credit for over 6 months"
@@ -61,7 +60,7 @@
 
          <div class="form-group">
             <input type="submit" class="button" value="Continue">
-          </div>        
+          </div>
       </div>
 
       <div class="column-third">
@@ -69,8 +68,8 @@
       </div>
 
     </div>
-  </form>  
-  
+  </form>
+
 
 </main><!-- / #page-container -->
 {{/content}}

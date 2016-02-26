@@ -8,7 +8,7 @@
 <main id="content" role="main">
   {{>includes/beta-banner}}
 
-  <form action="about-benefit-pension-credit" method="post" class="form">
+  <form method="post" class="form">
 
     <div class="grid-row">
 
@@ -17,9 +17,9 @@
 
         <fieldset class="inline form-group" id="less-than-100">
           <h1 class="form-title heading-large">
-            <legend for="less-than-100">Do you want to borrow more than £100?<legend> 
+            <legend for="less-than-100">Do you want to borrow more than £100?<legend>
           </h1>
-          <div ="less-than-100-error-container"> </div>
+          <div id="less-than-100-error-container"></div>
           <label class="block-label" data-target="less-than-yes" for="radio-inline-1">
             <input id="radio-inline-1" type="radio" name="lt100" value="Yes"
             required=""
@@ -44,7 +44,7 @@
 
         <div class=" form-group" id="less-than-yes">
           <input type="submit" class="button" value="Continue">
-        </div>        
+        </div>
       </div>
 
       <div class="column-third">
@@ -52,8 +52,8 @@
       </div>
 
     </div>
-  </form>  
-  
+  </form>
+
 
 </main><!-- / #page-container -->
 {{/content}}

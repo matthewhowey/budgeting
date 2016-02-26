@@ -8,7 +8,7 @@
 <main id="content" role="main">
   {{>includes/beta-banner}}
 
-  <form action="about-benefit-jsa" method="post" class="form">
+  <form method="post" class="form">
 
     <div class="grid-row">
 
@@ -19,7 +19,7 @@
             <li>
               <fieldset class="inline form-group" id="income-support-container">
                 <h1 class="form-title heading-large"><legend for="income-support">Do you get Income Support?</legend>
-                </h1>  
+                </h1>
                 <label class="block-label" data-target="income-support" for="income-support-1">
                   <input id="income-support-1" type="radio" name="income-support" value="Yes"
                     required
@@ -30,7 +30,7 @@
                   Yes
                 </label>
                 <label class="block-label" for="income-support-2">
-                  <input id="income-suport-2" type="radio" name="income-support" value="No">
+                  <input id="income-support-2" type="radio" name="income-support" value="No">
                   No
                 </label>
               </fieldset>
@@ -41,10 +41,9 @@
             <div class="form-group">
               <fieldset class="inline form-group" id="is-how-long-container">
                 <h1 class="form-title heading-medium"><legend for="is-how-long">Have you been getting Income Support for over 6 months?</legend>
-                </h1>  
+                </h1>
                 <label class="block-label" data-target="is-how-long" for="is-how-long-1">
                   <input id="is-how-long-1" type="radio" name="is-how-long" value="Yes"
-                    required
                     data-parsley-errors-container="#is-how-long-container"
                     data-parsley-class-handler="#is-how-long-container"
                     data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you have been getting Income Support for over 6 months"
@@ -63,7 +62,7 @@
             <input type="submit" class="button" value="Continue">
           </div>
 
-        
+
       </div>
 
       <div class="column-third">
@@ -71,8 +70,8 @@
       </div>
 
     </div>
-  </form>  
-  
+  </form>
+
 
 </main><!-- / #page-container -->
 {{/content}}
