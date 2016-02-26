@@ -15,26 +15,33 @@
       <div class="column-two-thirds">
         <a href="less-than-100" class="example-back-link">Back</a>
 
+
+
         <fieldset class="inline form-group" id="benefit-container">
-          <h1 class="form-title heading-large"><legend for="benefit">Have you been getting one of the following benefits for the past 6 months?</legend></h1>
-          <ul class="list-bullet" text="medium">
-            <li>Income Support</li>
-            <li>income-based Jobseeker's Allowance</li>
-            <li>income-related Employment and Support Allowance</li>
-            <li>Pension Credit</li>
-          </ul>  
-          <label class="block-label" data-target="benefit-yes" for="radio-inline-1">
-            <input id="radio-inline-1" type="radio" name="benefit" value="Yes"
+          <h1 class="form-title heading-large"><legend for="benefit">Do you get one of the following benefits?</legend></h1>
+          
+
+
+          <label class="block-label" data-target="pc" for="radio-inline-1">
+            <input id="radio-inline-1" type="radio" name="benefit" value="pc"
               required
-              data-parsley-errors-container="#benefit-container"
-              data-parsley-class-handler="#benefit-container"
+              data-parsley-errors-container="#pc-container"
+              data-parsley-class-handler="#pc-container"
               data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you have been getting one of the benefits listed"
               >
-            Yes
+            Pension Credit
           </label>
-          <label class="block-label" data-target="benefit-no" for="radio-inline-2">
-            <input id="radio-inline-2" type="radio" name="benefit" value="No">
-            No
+          <label class="block-label" data-target="is" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="benefit" value="is">
+            Income Support
+          </label>
+          <label class="block-label" data-target="esa" for="radio-inline-3">
+            <input id="radio-inline-3" type="radio" name="benefit" value="esa">
+            Employment and Support Allowance
+          </label>
+          <label class="block-label" data-target="jsa" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="benefit" value="jsa">
+            Jobseeekers Allowance
           </label>
         </fieldset>
 
