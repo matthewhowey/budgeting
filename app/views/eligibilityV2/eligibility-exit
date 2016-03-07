@@ -6,7 +6,7 @@
 <main id="content" role="main">
   {{>includes/beta-banner}}
 
-  <form action="what-happens-next" method="#" class="form">
+  <form action="#" class="form">
 
       <div class="grid-row">
 
@@ -14,7 +14,13 @@
 
           <h1 class="form-title heading-large">You are not eligible for a Budgeting Loan</h1>
             
-          <p>The answers you have provided mean you are not eligible for a Budgeting Loan.</p>
+         <!--<p>The answers you have provided mean you are not eligible for a Budgeting Loan.</p>
+          -->
+         
+          <div class="application-notice help-notice">
+            <p>The answers you have provided mean that you do not meet the eligibility to apply for a Budgeting Loan</p>
+          </div> 
+
 
           <!--<ul class="list-bullet">
             <li>you are not on a qualfying benefit</li>
