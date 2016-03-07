@@ -444,6 +444,24 @@ module.exports = {
 		});
 
 		//eligibilityV2
+
+		app.post('/eligibilityV2/before-you-start', function (req, res) {
+
+			var amount       = req.body['less-than-100'];
+			var benefit      = req.body['benefit'];
+			var savings      = req.body['savings'];
+			var industrial   = req.body['industrial-action'];
+			var oweSocial    = req.body['owe-social-fund'];
+
+			if (amount === 'Yes' && benefit === 'Yes' && savings == 'Yes' && industrial == 'Yes' && oweSocial === 'No') {
+				res.redirect('/eligibilityV2/partner')
+			} else if (amount === 'Yes' && benefit === 'Yes' && savings == 'Yes' && industrial == 'Yes' && oweSocial === 'Yes') {
+				res.redirect('/eligibilityV2/eligibility-exit');
+			} else {
+				res.redirect('/eligibilityV2/eligibility-exit')
+			}
+		});
+
 		app.post('/eligibilityV2/less-than-100', function (req, res) {
 			if (req.body.lt100 === 'No') {
 				res.redirect('/eligibilityV2/about-benefit')
