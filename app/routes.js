@@ -449,13 +449,13 @@ module.exports = {
 
 			var amount       = req.body['less-than-100'];
 			var benefit      = req.body['benefit'];
+			var oweSocial    = req.body['owe-social-fund'];
 			var savings      = req.body['savings'];
 			var industrial   = req.body['industrial-action'];
-			var oweSocial    = req.body['owe-social-fund'];
 
-			if (amount === 'Yes' && benefit === 'Yes' && savings == 'Yes' && industrial == 'Yes' && oweSocial === 'No') {
+			if (amount === 'Yes' && benefit === 'Yes' && oweSocial === 'No' && savings === 'No' && industrial === 'No') {
 				res.redirect('/eligibilityV2/partner')
-			} else if (amount === 'Yes' && benefit === 'Yes' && savings == 'Yes' && industrial == 'Yes' && oweSocial === 'Yes') {
+			} else if (amount === 'Yes' && benefit === 'Yes' && oweSocial === 'Yes' && savings === 'Yes' && industrial === 'Yes') {
 				res.redirect('/eligibilityV2/eligibility-exit');
 			} else {
 				res.redirect('/eligibilityV2/eligibility-exit')
