@@ -457,7 +457,12 @@ module.exports = {
 				res.redirect('/eligibilityV2/partner')
 			} else if (amount === 'Yes' && benefit === 'Yes' && oweSocial === 'Yes' && savings === 'Yes' && industrial === 'Yes') {
 				res.redirect('/eligibilityV2/eligibility-exit');
-			} else {
+			} else if (benefit === 'No') {
+				res.redirect('/eligibilityV2/eligibility-exit-benefit');
+			} else if (amount === 'No') {
+				res.redirect('eligibilityV2/eligibility-exit-100');
+			}
+			else {
 				res.redirect('/eligibilityV2/eligibility-exit')
 			}
 		});
