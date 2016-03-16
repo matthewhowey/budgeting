@@ -1,0 +1,77 @@
+
+
+{{<layout}}
+
+{{$pageTitle}}Apply for a Budgeting Loan{{/pageTitle}}
+
+{{$content}}
+<main id="content" role="main">
+  {{>includes/beta-banner}}
+
+  <form action="about-benefit" method="post" class="form">
+
+    <div class="grid-row">
+
+      <div class="column-two-thirds">
+        <a href="less-than-100" class="example-back-link">Back</a>
+
+
+
+        <fieldset class="inline form-group" id="benefit-container">
+          <h1 class="form-title heading-large"><legend for="benefit">Do you get one of the following benefits?</legend></h1>
+          
+
+
+          <label class="block-label" data-target="pc" for="radio-inline-1">
+            <input id="radio-inline-1" type="radio" name="benefit" value="pc"
+              required
+              data-parsley-errors-container="#pc-container"
+              data-parsley-class-handler="#pc-container"
+              data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm whether you have been getting one of the benefits listed"
+              >
+            Pension Credit
+          </label>
+          <label class="block-label" data-target="is" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="benefit" value="is">
+            Income Support
+          </label>
+          <label class="block-label" data-target="esa" for="radio-inline-3">
+            <input id="radio-inline-3" type="radio" name="benefit" value="esa">
+            Employment and Support Allowance
+          </label>
+          <label class="block-label" data-target="jsa" for="radio-inline-2">
+            <input id="radio-inline-2" type="radio" name="benefit" value="jsa">
+            Jobseeekers Allowance
+          </label>
+        </fieldset>
+
+        <div class="form-group js-hidden warning" id="benefit-no">
+
+          <h2 class="heading-small">If you have not been getting one of the benefits listed you will not be eligible to apply for a Budgeting Loan</h2>
+          <p><a href="https://www.gov.uk/find-your-local-council">Contact your local council</a> for information about emergency loans.</p>
+
+        </div>
+
+        <!-- <div class="js-hidden" id="benefit-no">
+          <div class="panel-indent">
+            <p>If you do not claim the benefits listed you will not be eligible to apply for a Budgeting Loan. For information on loans <a href="https://www.gov.uk/find-your-local-council">contact your Local Council</a> </p>
+          </div>
+        </div> -->
+
+        <div class=" form-group" id="benefit-yes">
+          <input type="submit" class="button" value="Continue">
+        </div>        
+      </div>
+
+      <div class="column-third">
+        <p>&nbsp;</p>
+      </div>
+
+    </div>
+  </form>  
+  
+
+</main><!-- / #page-container -->
+{{/content}}
+
+{{/layout}}
