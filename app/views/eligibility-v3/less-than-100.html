@@ -8,15 +8,16 @@
 <main id="content" role="main">
   {{>includes/beta-banner}}
 
-  <form action="less-than-100" method="post" class="form">
+  <form action="about-benefit" method="post" class="form">
 
     <div class="grid-row">
 
       <div class="column-two-thirds">
-        <a href="about-benefit" class="example-back-link">Back</a>
+        <a href="eligibility" class="example-back-link">Back</a>
+        <h1 class="form-title heading-large">Check your eligiblity</h1>
 
         <fieldset class="inline form-group" id="less-than-100">
-          <h1 class="form-title heading-large">
+          <h1 class="form-title heading-medium">
             <legend for="less-than-100">Do you want to borrow more than £100?<legend> 
           </h1>
           <div ="less-than-100-error-container"> </div>
@@ -35,12 +36,12 @@
           </label>
         </fieldset>
 
-        <div class="form-group js-hidden warning" id="less-than-no">
+       <!-- <div class="form-group js-hidden warning" id="less-than-no">
 
           <h2 class="heading-small">You can't borrow less than £100 with a Budgeting Loan</h2>
           <p><a href="https://www.gov.uk/find-your-local-council">Contact your local council</a> for information about emergency loans.</p>
 
-        </div>
+        </div> -->
 
         <div class=" form-group" id="less-than-yes">
           <input type="submit" class="button" value="Continue">

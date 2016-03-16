@@ -1,0 +1,59 @@
+
+
+{{<layout}}
+
+{{$pageTitle}}Apply for a Budgeting Loan{{/pageTitle}}
+
+{{$content}}
+<main id="content" role="main">
+  {{>includes/beta-banner}}
+  
+     
+  <form action="savings" method="post" class="form">
+
+    <div class="grid-row"> 
+      <div class="column-two-thirds">
+          <a href="partner-yes" class="example-back-link">Back</a>
+
+          <h1 class="form-title heading-large">Check your eligiblity</h1>
+          <ul>
+            <li>
+              <fieldset class="inline form-group" id="social-fund-debt-container">
+                <h1 class="form-title heading-medium"><legend for="social-fund">Do you owe the Social Fund more than £1,500 for a Crisis Loan or Budgeting Loan?</legend>
+                </h1>  
+                <label class="block-label" data-target="live-with" for="social-fund-1">
+                  <input id="social-fund-1" type="radio" name="social-fund" value="Yes"
+                    required
+                    data-parsley-errors-container="#social-fund-container"
+                    data-parsley-class-handler="#social-fund-container"
+                    data-parsley-error-message="Select one answer"
+                  >
+                  Yes
+                </label>
+                <label class="block-label" for="social-fund-2">
+                  <input id="social-fund-2" type="radio" name="social-fund" value="No">
+                  No
+                </label>
+                <label class="block-label" for="social-fund-3" data-target="unsure">
+                  <input id="social-fund-3" type="radio" name="social-fund" value="Unsure">
+                  Don't know
+                </label>
+              </fieldset>
+            </li>
+          </ul>
+          <div class="form-group">
+            <input type="submit" class="button" value="Continue">
+          </div>
+          
+        </form>
+      </div>
+
+      <div class="column-third">
+            <p>&nbsp;</p>
+      </div>
+    </div>
+  </form> 
+</main><!-- / #page-container -->
+{{/content}}
+
+{{/layout}}
