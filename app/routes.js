@@ -517,39 +517,49 @@ module.exports = {
 
 		//eligiblity-v3
 
-app.post('/eligibilityV2/before-you-start', function (req, res) {
+app.post('/eligibility-v3/before-you-start', function (req, res) {
 
-			var amount       = req.body['less-than-100'];
-			var benefit      = req.body['benefit'];
-			var oweSocial    = req.body['owe-social-fund'];
-			var savings      = req.body['savings'];
-			var industrial   = req.body['industrial-action'];
-
-			if (amount === 'Yes' && benefit === 'Yes' && oweSocial === 'No' && savings === 'No' && industrial === 'No') {
-				res.redirect('/eligibilityV2/partner')
-			} else if (amount === 'Yes' && benefit === 'Yes' && oweSocial === 'Yes' && savings === 'Yes' && industrial === 'Yes') {
-				res.redirect('/eligibility-v3/eligibility-exit');
-			} else if (benefit === 'No') {
-				res.redirect('/eligibility-v3/eligibility-exit-benefit');
-			} else if (amount === 'No') {
-				res.redirect('eligibility-v3/eligibility-exit-100');
-			}
-			else {
-				res.redirect('/eligibility-v3/eligibility-exit')
-			}
+			
 		});
 
 		app.post('/eligibility-v3/less-than-100', function (req, res) {
 			if (req.body.lt100 === 'No') {
-				res.redirect('/eligibilityV2/about-benefit')
+				res.redirect('/eligibility-v3/eligibility-exit-100')
 			} else {
-				res.redirect('/eligibilityV2/about-benefit')
+				res.redirect('/eligibility-v3/about-benefit')
 			}
 		});
 
+		app.post('/eligibility-v3/social-fund-debt', function (req, res) {
+			if (req.body.socialfund === 'No') {
+				res.redirect('/eligibility-v3/savings')
+			} else {
+				res.redirect('/eligibility-v3/eligibility-exit-social-fund')
+			}
+
+		});
+			
+		app.post('/eligibility-v3/savings', function (req, res) {
+			if (req.body.savings === 'No') {
+				res.redirect('/eligibility-v3/industrial-action')
+			} else {
+				res.redirect('/eligibility-v3/eligibility-exit-savings')
+			}
+
+		});
+
+		app.post('/eligibility-v3/industrial-action', function (req, res) {
+			if (req.body.industrialaction=== 'No') {
+				res.redirect('/eligibility-v3/eligibility-confirmation')
+			} else {
+				res.redirect('/eligibility-v3/eligibility-exit-industrial-action')
+			}
+
+		});	
+
 		app.post('/eligibility-v3/about-benefit', function (req, res) {
 			if (req.body.benefit === 'Yes') {
-				res.redirect('/eligibility-v3/partner')
+				res.redirect('/eligibility-v3/so')
 			} else {
 				res.redirect('/eligibility-v3/overview')
 			}

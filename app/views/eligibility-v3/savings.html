@@ -9,7 +9,7 @@
   {{>includes/beta-banner}}
   
      
-  <form action="industrial-action" method="post" class="form">
+  <form action="savings" method="post" class="form">
 
     <div class="grid-row"> 
       <div class="column-two-thirds">
@@ -19,14 +19,14 @@
           <ul>
             <li>
               <fieldset class="inline form-group" id="savings-container">
-                <h1 class="form-title heading-medium"><legend for="savings">Do you or your partner have combined savings of more than £1,000 (£2,000 if either of you are over 61)?</legend>
+                <h1 class="form-title heading-medium"><legend for="savings">Do you and your partner have combined savings of more than £1,000 (£2,000 if either of you are over 61)?</legend>
                 </h1>  
-                <label class="block-label" data-target="savings-yes" for="savings-1">
+                <label class="block-label" data-target="savings" for="savings-1">
                   <input id="savings-1" type="radio" name="savings" value="Yes"
                     required
                     data-parsley-errors-container="#savings-container"
                     data-parsley-class-handler="#savings-container"
-                    data-parsley-error-message="Select 'Yes' or 'No'"
+                    data-parsley-error-message="Select 'Yes' or 'No' to confirm whether you and your partner have combined savings of more than £1,000"
                   >
                   Yes
                 </label>
