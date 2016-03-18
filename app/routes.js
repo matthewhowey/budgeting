@@ -533,7 +533,9 @@ app.post('/eligibility-v3/before-you-start', function (req, res) {
 		app.post('/eligibility-v3/social-fund-debt', function (req, res) {
 			if (req.body.socialfund === 'No') {
 				res.redirect('/eligibility-v3/savings')
-			} else {
+			} else if (req.body.socialfund ==='Yes') { 
+				res.redirect('/eligibility-v3/eligibility-exit-social-fund-la')
+			} else { 
 				res.redirect('/eligibility-v3/eligibility-exit-social-fund')
 			}
 
@@ -558,10 +560,22 @@ app.post('/eligibility-v3/before-you-start', function (req, res) {
 		});	
 
 		app.post('/eligibility-v3/about-benefit', function (req, res) {
-			if (req.body.benefit === 'Yes') {
-				res.redirect('/eligibility-v3/so')
+			var hasEnoughBenefit=(
+				req.body.incomesupport6 === 'Yes' ||
+				req.body.pensioncredit6 === 'Yes' ||
+				req.body.jsa6 === 'Yes' ||
+				req.body.esa6 === 'Yes' 
+			)
+			var needsMoreInfo=(
+				req.body.esatype === 'Unsure' ||
+				req.body.jsatype === 'Unsure'
+			)
+			if (hasEnoughBenefit){
+				res.redirect('/eligibility-v3/social-fund-debt')
+			} else if (needsMoreInfo){
+				res.redirect('/eligibility-v3/eligibility-exit-benefit')
 			} else {
-				res.redirect('/eligibility-v3/overview')
+				res.redirect('/eligibility-v3/eligibility-exit-benefit-la')
 			}
 		});
 
