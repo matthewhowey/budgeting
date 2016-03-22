@@ -611,6 +611,101 @@ app.post('/eligibility-v3/before-you-start', function (req, res) {
 			}
 		});
 
+		//eligibilty-v4
+
+		app.post('/eligibility-v4/before-you-start', function (req, res) {
+
+			
+		});
+
+		app.post('/eligibility-v4/less-than-100', function (req, res) {
+			if (req.body.lt100 === 'No') {
+				res.redirect('/eligibility-v4/eligibility-exit-100')
+			} else {
+				res.redirect('/eligibility-v4/about-benefit')
+			}
+		});
+
+		app.post('/eligibility-v4/social-fund-debt', function (req, res) {
+			if (req.body.socialfund === 'No') {
+				res.redirect('/eligibility-v4/savings')
+			} else if (req.body.socialfund ==='Yes') { 
+				res.redirect('/eligibility-v4/eligibility-exit-social-fund-la')
+			} else { 
+				res.redirect('/eligibility-v4/eligibility-exit-social-fund')
+			}
+
+		});
+			
+		app.post('/eligibility-v4/savings', function (req, res) {
+			if (req.body.savings === 'No') {
+				res.redirect('/eligibility-v4/industrial-action')
+			} else {
+				res.redirect('/eligibility-v4/eligibility-exit-savings')
+			}
+
+		});
+
+		app.post('/eligibility-v4/industrial-action', function (req, res) {
+			if (req.body.industrialaction=== 'No') {
+				res.redirect('/eligibility-v4/eligibility-confirmation')
+			} else {
+				res.redirect('/eligibility-v4/eligibility-exit-industrial-action')
+			}
+
+		});	
+
+		app.post('/eligibility-v4/about-benefit', function (req, res) {
+			var hasEnoughBenefit=(
+				req.body.incomesupport6 === 'Yes' ||
+				req.body.pensioncredit6 === 'Yes' ||
+				req.body.jsa6 === 'Yes' ||
+				req.body.esa6 === 'Yes' 
+			)
+			var needsMoreInfo=(
+				req.body.esatype === 'Unsure' ||
+				req.body.jsatype === 'Unsure'
+			)
+			if (hasEnoughBenefit){
+				res.redirect('/eligibility-v4/social-fund-debt')
+			} else if (needsMoreInfo){
+				res.redirect('/eligibility-v4/eligibility-exit-benefit')
+			} else {
+				res.redirect('/eligibility-v4/eligibility-exit-benefit-la')
+			}
+		});
+
+		app.post('/eligibility-v4/partner', function (req, res) {
+			if (req.body.partner === 'Yes') {
+				res.redirect('/eligibility-v4/partner-yes')
+			} else {
+				res.redirect('/eligibility-v4/partner-no')
+			}
+		});
+
+		app.post('/eligibility-v4/debt-repayments-partner', function (req, res) {
+			if (req.body.partner === 'Yes') {
+				res.redirect('/eligibility-v4/debt-repayment')
+			} else {
+				res.redirect('/eligibility-v4/personal-details')
+			}
+		});
+
+		app.post('/eligibility-v4/children', function (req, res) {
+			if (req.body.children === 'Yes') {
+				res.redirect('/eligibility-v4/loan-amount-child')
+			} else {
+				res.redirect('/eligibility-v4/loan-amount-partner')
+			}
+		});
+
+		app.post('/eligibility-v4/children-no-partner', function (req, res) {
+			if (req.body.children === 'Yes') {
+				res.redirect('/eligibility-v4/loan-amount-child-single')
+			} else {
+				res.redirect('/eligibility-v4/loan-amount-single')
+			}
+		});
 
 		// MVPv01
 		app.post('/MVPv01/about-benefit', function (req, res) {
