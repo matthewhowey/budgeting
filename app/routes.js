@@ -659,7 +659,7 @@ app.post('/eligibility-v3/before-you-start', function (req, res) {
 			var hasEnoughBenefit=(
 				req.body.incomesupport6 === 'Yes' ||
 				req.body.pensioncredit6 === 'Yes' ||
-				req.body.jsa6 === 'Yes' ||
+				req.body.jsalength === 'Yes' ||
 				req.body.esalength === 'Yes' 
 			)
 			var needsMoreInfo=(

@@ -51,11 +51,9 @@
                 <h1 class="form-label-bold"><legend for="pc-how-long">Have you been getting Pension Credit for the past 6 months?</legend>
                 </h1>
                  <div id="pc-how-long-error-container"></div> 
-                <label class="block-label" data-target="aboutbenefitpc" for="pc-how-long-1">
+                <label class="block-label"  for="pc-how-long-1">
                   <input id="pc-how-long-1" type="radio" name="pensioncredit6" value="Yes"
-                    data-parsley-errors-container="#pc-how-long-error-container"
-                    data-parsley-class-handler="#pc-how-long-container"
-                    data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm if you have been getting Pension Credit for the past 6 months"
+                    
                   >
                   Yes
                 </label>
@@ -73,11 +71,9 @@
                 <h1 class="form-label-bold"><legend for="pc-how-long">Have you been getting Income Support for the past 6 months?</legend>
                 </h1>
                 <div id="is-how-long-error-container"></div>
-                <label class="block-label" data-target="aboutbenefitis" for="is-how-long-1">
+                <label class="block-label" for="is-how-long-1">
                   <input id="is-how-long-1" type="radio" name="incomesupport6" value="Yes"
-                    data-parsley-errors-container="#is-how-long-error-container"
-                    data-parsley-class-handler="#is-how-long-container"
-                    data-parsley-error-message="Select ‘Yes’ or ‘No’ to confirm if you have been getting Income Support for the past 6 months"
+                    
                   >
                   Yes
                 </label>
@@ -96,10 +92,8 @@
                 </h1>
                 <div id="esa-type-error-container"></div>
                 <label class="block-label" data-target="esa-type" for="esa-type-1">
-                  <input id="esa-type-1" type="radio" name="esa-type" value="Income"
-                    data-parsley-errors-container="#esa-type-error-container"
-                    data-parsley-class-handler="#esa-type-container"
-                    data-parsley-error-message="Select the type of Jobseekers Allowance you get"
+                  <input id="esa-type-1" type="radio" name="esatype" value="Income"
+                    
                   >
                   Income-related
                 </label>
@@ -124,9 +118,6 @@
                 <div id="esa-length-error-container"> </div>
                 <label class="block-label" data-target="esa-length" for="esa-length-1">
                   <input id="esa-length-1" type="radio" name="esalength" value="Yes"
-                    data-parsley-errors-container="#esa-length-error-container"
-                    data-parsley-class-handler="#esa-length-container"
-                    data-parsley-error-message="Select if you have been getting the benefit for the past 6 months"
                   >
                   Yes
                 </label>
@@ -145,19 +136,17 @@
                   </h1>
                   <div id="jsa-type-error-container"> </div>
                   <label class="block-label" data-target="jsa-type" for="jsa-type-1">
-                    <input id="jsa-type-1" type="radio" name="jsa-type" value="Income"
-                      data-parsley-errors-container="#jsa-type-error-container"
-                      data-parsley-class-handler="#jsa-type-container"
-                      data-parsley-error-message="Select the type of Jobseekers Allowance you get"
+                    <input id="jsa-type-1" type="radio" name="jsatype" value="Income"
+                      
                     >
                     Income-based
                   </label>
                   <label class="block-label" for="jsa-type-2" data-target="contribution">
-                    <input id="jsa-type-2" type="radio" name="jsa-type" value="Contribution">
+                    <input id="jsa-type-2" type="radio" name="jsatype" value="Contribution">
                     Contribution-based
                   </label>
                   <label class="block-label" for="jsa-type-3" data-target="unsure">
-                    <input id="jsa-type-3" type="radio" name="jsa-type" value="Unsure">
+                    <input id="jsa-type-3" type="radio" name="jsatype" value="Unsure">
                     Don't know
                   </label>
                 </fieldset>
@@ -171,15 +160,13 @@
                 </h1>
                 <div id="jsa-length-error-container"> </div>
                 <label class="block-label" data-target="jsa-length" for="jsa-length-1">
-                  <input id="jsa-length-1" type="radio" name="jsa-length" value="over6"
-                    data-parsley-errors-container="#jsa-length-error-container"
-                    data-parsley-class-handler="#jsa-length-container"
-                    data-parsley-error-message="Select if you have been getting the benefit for the past 6 months"
+                  <input id="jsa-length-1" type="radio" name="jsalength" value="Yes"
+                    
                   >
                   Yes
                 </label>
                 <label class="block-label" for="jsa-length-2">
-                  <input id="jsa-length-2" type="radio" name="jsa-length" value="under6">
+                  <input id="jsa-length-2" type="radio" name="jsalength" value="No">
                   No
                 </label>
               </fieldset>
