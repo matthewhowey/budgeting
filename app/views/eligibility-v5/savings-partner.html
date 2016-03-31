@@ -7,19 +7,17 @@
   {{>includes/beta-banner}}
   
      
-  <form action="debt-repayments-partner" method="post" class="form">
+  <form action="debt-repayments-partner" method="#" class="form">
 
     <div class="grid-row"> 
       <div class="column-two-thirds">
-          <a href="loan-amount-#" class="example-back-link">Back</a>
+          <a href="javascript:history.back()" class="example-back-link">Back</a>
 
         <ul>
           <li>
               <fieldset class="inline form-group" id="savings-partner-container">
-                <h1 class="form-title heading-large"><legend for="savings-partner">Do you and your partner have combined savings of more than £1,000?</legend> 
-                </h1>  
-                <p>(£2,000 if either of you are over 61)?</p>
-              
+                <h1 class="form-title heading-large"><legend for="savings-partner">Do you and your partner have combined savings of more than £1,000 (£2,000 if either of you are over 61)?</legend> 
+                </h1>    
                 <label class="block-label" data-target="savings-partner" for="savings-1">
                   <input id="savings-1" type="radio" name="savingspartner" value="Yes"
                     required
