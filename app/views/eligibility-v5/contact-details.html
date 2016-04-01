@@ -17,10 +17,11 @@
        <ul>
         <li>
           <fieldset id="contact-details">
+            <h1 class="form-title heading-large">About you</h1>
       
-            <legend class="form-label-bold">Your address</legend>
+          <!--  <legend class="form-label-bold">Address</legend> -->
             <div class="form-group" id="address-container">
-              <p class="form-label">Address</p>
+            <p class="form-label">Address</p>
               <div id="address-error-container"> </div>
               <label class="form-label"><input type="text" class="form-control" id="address-line1"
                 required
@@ -41,7 +42,7 @@
                 data-parsley-class-handler="#postcode-container"
                 data-parsley-error-message="Enter a valid postcode"
               >
-             <p class="font-small">If you have no fixed address, put a contact address where we can write to you.</p> 
+            <!-- <p class="font-small">If you have no fixed address, put a contact address where we can write to you.</p> -->
             </div>
             
           </fieldset>
@@ -51,7 +52,8 @@
           <input type="text" class="form-control" id="email">
         </li> </!>-->
         <li class="form-group" id="phone-container">
-          <label class="form-label-bold" for="phone">Your phone number</label>
+          <label class="form-label-bold" for="phone">Mobile (optional)</label>
+          <p>Receive text message updates about your application</p>
           <div id="phone-error-container"> </div>
           <input type="text" class="form-control" id="phone"
             required
