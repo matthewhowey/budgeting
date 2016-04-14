@@ -1,10 +1,14 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}Apply for a Budgeting Loan{{/pageTitle}}
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
 
-{{$content}}
+{% block content %}
+
 <main id="content" role="main">
-  {{>includes/beta-banner}}
+
+{% include "includes/beta-banner.html" %}
   
   <form action="children-no-partner" method="#" class="form">
 
@@ -32,6 +36,4 @@
   </div>
 
 </main><!-- / #page-container -->
-{{/content}}
-
-{{/layout}}
+{% endblock %}

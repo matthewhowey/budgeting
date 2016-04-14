@@ -1,10 +1,14 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}Budgeting Loans{{/pageTitle}}
+{% block page_title %}
+  Budgeting Loans
+{% endblock %}
 
-{{$content}}
+{% block content %}
+
 <main id="content" role="main">
-  {{>includes/alpha-banner}}
+
+{% include "includes/alpha-banner.html" %}
   
   <form action="money-you-owe" method="post" class="form">
 
@@ -35,6 +39,4 @@
 
 </form>
 </main><!-- / #page-container -->
-{{/content}}
-
-{{/layout}}
+{% endblock %}

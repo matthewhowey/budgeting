@@ -1,10 +1,14 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}Apply for Budgeting Loan{{/pageTitle}}
+{% block page_title %}
+  Apply for a Budgeting Loan
+{% endblock %}
 
-{{$content}}
+{% block content %}
+
 <main id="content" role="main">
-	{{>includes/beta-banner}}
+
+{% include "includes/beta-banner.html" %}
 
 	<form method="post" class="form">
 		<div class="column-two-thirds">
@@ -127,6 +131,4 @@
 		</div>
 	</form>
 </main><!-- / #page-container -->
-{{/content}}
-
-{{/layout}}
+{% endblock %}
