@@ -1,10 +1,15 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}Apply for a Budgeting Loan{{/pageTitle}}
+{% block page_title %}
+    Apply for a Budgeting Loan
+{% endblock %}
 
-{{$content}}
+{% block content %}
+
 <main id="content" role="main">
-  {{>includes/alpha-banner}}
+
+  {% include "includes/beta-banner.html" %}
+  
   <div class="grid-row">
     <div class="column-two-thirds">
   
@@ -61,6 +66,5 @@
 
 
 </main><!-- / #page-container -->
-{{/content}}
 
-{{/layout}}
+{% endblock %}

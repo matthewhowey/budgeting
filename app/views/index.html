@@ -1,10 +1,10 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}
-	Budgeting Loans
-{{/pageTitle}}
+{% block page_title %}
+    Apply for a Budgeting Loan
+{% endblock %}
 
-{{$content}}
+{% block content %}
 
 <main id="content" role="main">
 	<h1 class="heading-xlarge">Apply for a Budgeting Loan</h1>
@@ -13,7 +13,7 @@
 	<div class="grid-row">
 
 	    <div class="column-half">
-	    	<h2 class="heading-large">Beta Prototypes </h2>
+	    	<h2 class="heading-large">Beta Prototypes</h2>
 
 			<ul class="list-bullet">
 				<li>
@@ -67,7 +67,7 @@
 
 			<ul class="list-bullet">
 				<li>
-					<a href="https://github.com/alphagov/govuk_prototype_kit/docs">
+					<a href="https://github.com/alphagov/govuk_prototype_kit/tree/master/docs">
 						GOV.UK kit documentation
 					</a>
 				</li>
@@ -160,6 +160,4 @@
 
 </main>
 
-{{/content}}
-
-{{/layout}}
+{% endblock %}

@@ -1,11 +1,15 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}Apply for a Budgeting Loan{{/pageTitle}}
+{% block page_title %}
+    Apply for a Budgeting Loan
+{% endblock %}
 
-{{$content}}
+{% block content %}
+
 <main id="content" role="main">
-  {{>includes/alpha-banner}}
-  
+
+  {% include "includes/beta-banner.html" %}
+
   <form action="personal-details" method="#" class="form">
 
   <a href="need-loan" class="example-back-link">Back</a>
@@ -132,9 +136,9 @@
     </div>
 
 </main><!-- / #page-container -->
-{{/content}}
 
-{{/layout}}
+{% endblock %}
+
 <script>
   $(document).ready(function() {
   

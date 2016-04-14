@@ -1,10 +1,15 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}Apply for a Budgeting Loan{{/pageTitle}}
+{% block page_title %}
+    Apply for a Budgeting Loan
+{% endblock %}
 
-{{$content}}
+{% block content %}
+
 <main id="content" role="main">
-  {{>includes/beta-banner}}
+
+  {% include "includes/beta-banner.html" %}
+  
   <form action="debt-repayments-partner" method="#" class="form">
 
     <div class="grid-row">
@@ -32,6 +37,5 @@
   </form>  
 
 </main><!-- / #page-container -->
-{{/content}}
 
-{{/layout}}
+{% endblock %}

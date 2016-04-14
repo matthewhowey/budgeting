@@ -1,10 +1,14 @@
-{{<layout}}
+{% extends "layout.html" %}
 
-{{$pageTitle}}Apply for a Budgeting Loan{{/pageTitle}}
+{% block page_title %}
+    Apply for a Budgeting Loan
+{% endblock %}
 
-{{$content}}
+{% block content %}
+
 <main id="content" role="main">
-  {{>includes/beta-banner}}
+
+  {% include "includes/beta-banner.html" %}
 
   <form action="debt-repayments-partner" method="#" class="form">
 
@@ -13,9 +17,6 @@
     
         <a href="children" class="example-back-link">Back</a>
 
-        
-
-        
            <div class="form-group" id="amount-container">    
             <label for="loan-amount"><h1 class="heading-large">You can apply for between £100 and £812 - how much do you need?</h1>
             </label>
@@ -43,6 +44,5 @@
   </form>  
 
 </main><!-- / #page-container -->
-{{/content}}
 
-{{/layout}}
+{% endblock %}
