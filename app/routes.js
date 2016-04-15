@@ -380,11 +380,48 @@ module.exports = {
       }
     });
 
+    // Pension Credit question
     app.post('/beta06/current-benefits-pc', function (req, res) {
       if (req.body.duration === 'over6') {
         res.redirect('/beta06/borrow-amount');
       } else if (req.body.duration === 'under6') {
         res.redirect('/beta06/not-eligible-current-benefits');
+      }
+    });
+
+    // Income Support question
+    app.post('/beta06/current-benefits-is', function (req, res) {
+      if (req.body.duration === 'over6') {
+        res.redirect('/beta06/borrow-amount');
+      } else if (req.body.duration === 'under6') {
+        res.redirect('/beta06/not-eligible-current-benefits');
+      }
+    });
+
+    // ESA question
+    app.post('/beta06/current-benefits-esa', function (req, res) {
+      if (req.body.duration === 'over6') {
+        res.redirect('/beta06/borrow-amount');
+      } else if (req.body.duration === 'under6') {
+        res.redirect('/beta06/not-eligible-current-benefits');
+      }
+    });
+
+    // JSA question
+    app.post('/beta06/current-benefits-jsa', function (req, res) {
+      if (req.body.duration === 'over6') {
+        res.redirect('/beta06/borrow-amount');
+      } else if (req.body.duration === 'under6') {
+        res.redirect('/beta06/not-eligible-current-benefits');
+      }
+    });
+
+    // Borrow amount
+    app.post('/beta06/borrow-amount', function (req, res) {
+      if (req.body.borrowamount === 'yes') {
+        res.redirect('/beta06/industrial-action');
+      } else if (req.body.borrowamount === 'no') {
+        res.redirect('/beta06/not-eligible-borrow-amount');
       }
     });
 
