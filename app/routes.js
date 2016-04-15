@@ -472,6 +472,45 @@ module.exports = {
       res.redirect('/beta06/loan-amount');
     });
 
+    // Loan amount
+    app.post('/beta06/loan-amount', function (req, res) {
+      res.redirect('/beta06/debt-repayments');
+    });
+
+    // Debt repayments
+    app.post('/beta06/debt-repayments', function (req, res) {
+      if (req.body.choice === 'yes') {
+        res.redirect('/beta06/debt-repayments-detail');
+      } else if (req.body.choice === 'no') {
+        res.redirect('/beta06/about-you');
+      }
+    });
+
+    // Debt repayments detail
+    app.post('/beta06/debt-repayments-detail', function (req, res) {
+      res.redirect('/beta06/debt-repayments-other');
+    });
+
+    // Other debt repayments
+    app.post('/beta06/debt-repayments-other', function (req, res) {
+      if (req.body.choice === 'yes') {
+        res.redirect('/beta06/debt-repayments-detail');
+      } else if (req.body.choice === 'no') {
+        res.redirect('/beta06/about-you');
+      }
+    });
+
+    // About you
+    app.post('/beta06/about-you', function (req, res) {
+      res.redirect('/beta06/your-contact-details');
+    });
+
+    // Your contact details
+    app.post('/beta06/your-contact-details', function (req, res) {
+      res.redirect('/beta06/declaration');
+    });
+
+
 
 
 
