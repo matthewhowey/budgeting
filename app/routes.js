@@ -425,6 +425,15 @@ module.exports = {
       }
     });
 
+    // Industrial action
+    app.post('/beta06/industrial-action', function (req, res) {
+      if (req.body.choice === 'yes') {
+        res.redirect('/beta06/not-eligible-industrial-action');
+      } else if (req.body.choice === 'no') {
+        res.redirect('/beta06/eligible');
+      }
+    });
+
 
 
 
