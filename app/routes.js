@@ -434,6 +434,44 @@ module.exports = {
       }
     });
 
+    // Eligable
+    app.post('/beta06/eligible', function (req, res) {
+      res.redirect('/beta06/partner');
+    });
+
+    // Partner
+    app.post('/beta06/partner', function (req, res) {
+      if (req.body.choice === 'yes') {
+        res.redirect('/beta06/your-partner');
+      } else if (req.body.choice === 'no') {
+        res.redirect('/beta06/recent-partners');
+      }
+    });
+
+    // Recent partners
+    app.post('/beta06/recent-partners', function (req, res) {
+      if (req.body.choice === 'yes') {
+        res.redirect('/beta06/child-benefit-you-or-partner');
+      } else if (req.body.choice === 'no') {
+        res.redirect('/beta06/child-benefit');
+      }
+    });
+
+    // Your partner
+    app.post('/beta06/your-partner', function (req, res) {
+      res.redirect('/beta06/child-benefit-you-or-partner');
+    });
+
+    // Child benefit
+    app.post('/beta06/child-benefit', function (req, res) {
+      res.redirect('/beta06/loan-amount');
+    });
+
+    // Child benefit (you or your partner)
+    app.post('/beta06/child-benefit-you-or-partner', function (req, res) {
+      res.redirect('/beta06/loan-amount');
+    });
+
 
 
 
