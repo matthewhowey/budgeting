@@ -384,7 +384,7 @@ module.exports = {
       if (req.body.duration === 'over6') {
         res.redirect('/beta06/borrow-amount');
       } else if (req.body.duration === 'under6') {
-        res.redirect('/beta06/not-eligible-pension-credit');
+        res.redirect('/beta06/not-eligible-current-benefits');
       }
     });
 
