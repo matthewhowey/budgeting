@@ -350,7 +350,6 @@ module.exports = {
 		});
 
     app.post('/beta06/current-benefits', function (req, res) {
-
       // Pension Credit
       if (req.body.benefit === 'pc') {
         res.redirect('/beta06/current-benefits-pc');
@@ -379,20 +378,14 @@ module.exports = {
       } else {
         res.redirect('/beta06/not-eligible-current-benefits');
       }
+    });
 
-      
-
-      
-
-      // if (req.body.jsabenefittype === 'jsabenefittype1') {
-      //   res.redirect('/beta06/current-benefits-jsa');
-      // } else {
-      //   res.redirect('no');
-      // }
-
-
-
-
+    app.post('/beta06/current-benefits-pc', function (req, res) {
+      if (req.body.duration === 'over6') {
+        res.redirect('/beta06/borrow-amount');
+      } else if (req.body.duration === 'under6') {
+        res.redirect('/beta06/not-eligible-pension-credit');
+      }
     });
 
 
