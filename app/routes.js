@@ -349,6 +349,52 @@ module.exports = {
       }
 		});
 
+    app.post('/beta06/current-benefits', function (req, res) {
+
+      // Pension Credit
+      if (req.body.benefit === 'pc') {
+        res.redirect('/beta06/current-benefits-pc');
+      // Income Support
+      } else if (req.body.benefit === 'is') {
+        res.redirect('/beta06/current-benefits-is');
+      // Employment and Support Allowance
+      } else if (req.body.benefit === 'esa') {
+        if (req.body.esabenefittype === 'esabenefittype1') {
+          res.redirect('/beta06/current-benefits-esa');
+          } else if (req.body.esabenefittype === 'esabenefittype2') {
+            res.redirect('/beta06/not-eligible-current-benefits');
+          } else {
+            res.redirect('/beta06/not-sure-eligible');
+        }
+      // Jobseeker’s Allowance
+      } else if (req.body.benefit === 'jsa') {
+        if (req.body.jsabenefittype === 'jsabenefittype1') {
+          res.redirect('/beta06/current-benefits-jsa');
+          } else if (req.body.jsabenefittype === 'jsabenefittype2') {
+            res.redirect('/beta06/not-eligible-current-benefits');
+          } else {
+            res.redirect('/beta06/not-sure-eligible');
+        }
+      // Not eligible
+      } else {
+        res.redirect('/beta06/not-eligible-current-benefits');
+      }
+
+      
+
+      
+
+      // if (req.body.jsabenefittype === 'jsabenefittype1') {
+      //   res.redirect('/beta06/current-benefits-jsa');
+      // } else {
+      //   res.redirect('no');
+      // }
+
+
+
+
+    });
+
 
 
 
