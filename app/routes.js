@@ -334,6 +334,28 @@ module.exports = {
 			}
 		});
 
+
+
+
+		// beta06
+
+		app.post('/beta06/outstanding-social-fund-loans', function (req, res) {
+			if (req.body.choice === 'yes') {
+				res.redirect('/beta06/yes');
+			} else if (req.body.choice === 'no') {
+				res.redirect('/beta06/no');
+			} else {
+				res.redirect('/dont-know');
+      }
+		});
+
+
+
+
+
+
+
+
 		// eligibilityV1
 		app.post('/eligibilityV1/less-than-100', function (req, res) {
 			if (req.body.lt100 === 'Yes') {
