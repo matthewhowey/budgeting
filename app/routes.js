@@ -341,11 +341,11 @@ module.exports = {
 
 		app.post('/beta06/outstanding-social-fund-loans', function (req, res) {
 			if (req.body.choice === 'yes') {
-				res.redirect('/beta06/yes');
+				res.redirect('/beta06/not-eligible-social-fund');
 			} else if (req.body.choice === 'no') {
-				res.redirect('/beta06/no');
-			} else {
-				res.redirect('/dont-know');
+				res.redirect('/beta06/current-benefits');
+			} else if (req.body.choice === 'unsure') {
+        res.redirect('/beta06/not-sure-eligible');
       }
 		});
 

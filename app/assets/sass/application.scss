@@ -58,6 +58,9 @@
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+
+
+
 .application-notice, article .application-notice
 {
   padding-top: 0.1em;
@@ -187,4 +190,66 @@ legend span {
   border: 3px solid #af1324;
   padding: 15px;
   margin-bottom: 30px
+}
+
+
+// Start page section links
+
+.rough--section-links {
+  margin-top: -5px;
+  @include media(tablet) {
+    margin-top: -15px;
+    margin-bottom: -10px;
+  }
+  ol li {
+    margin-bottom: 14px;
+  }
+}
+
+// Start page hr
+
+hr.rough--section-links-divider {
+  position: relative;
+  top: -10px;
+  margin-bottom: 0;
+  @include media(tablet) {
+    top: -8px;
+    margin-bottom: -12px;
+  }
+}
+
+// £ classes
+
+.c-form-input-denote {
+    position: absolute;
+    background-color: rgb(222, 224, 226);
+    line-height: 1;
+    margin: 2px 0px 0px 2px;
+    padding: 7px 12px;
+    z-index: 0;
+}
+
+.c-form-input-denote__input {
+    margin: 0;
+    padding-left: 40px;
+    background-color: transparent !important;
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+}
+
+// Notices
+
+.notice {
+  background-color: red;
+  padding: 13px 15px 5px 15px;
+  margin-top: 20px;
+  @include media(tablet) {
+    margin-top: 25px;
+    padding: 13px 20px 5px 20px;
+  }
+}
+
+.notice.polite {
+  background-color: #d5e9f5;
 }
