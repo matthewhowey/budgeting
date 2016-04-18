@@ -334,20 +334,17 @@ module.exports = {
 			}
 		});
 
+  	// beta06
 
-
-
-		// beta06
-
-		app.post('/beta06/outstanding-social-fund-loans', function (req, res) {
-			if (req.body.choice === 'yes') {
-				res.redirect('/beta06/not-eligible-social-fund');
-			} else if (req.body.choice === 'no') {
-				res.redirect('/beta06/current-benefits');
-			} else if (req.body.choice === 'unsure') {
-        res.redirect('/beta06/not-sure-eligible');
+  	app.post('/beta06/outstanding-social-fund-loans', function (req, res) {
+  	 if (req.body.choice === 'yes') {
+  		res.redirect('/beta06/not-eligible-social-fund');
+  	 } else if (req.body.choice === 'no') {
+  		res.redirect('/beta06/current-benefits');
+  	 } else if (req.body.choice === 'unsure') {
+          res.redirect('/beta06/not-sure-eligible-social-fund');
       }
-		});
+  	});
 
     app.post('/beta06/current-benefits', function (req, res) {
       // Pension Credit
@@ -363,7 +360,7 @@ module.exports = {
           } else if (req.body.esabenefittype === 'esabenefittype2') {
             res.redirect('/beta06/not-eligible-current-benefits');
           } else {
-            res.redirect('/beta06/not-sure-eligible');
+            res.redirect('/beta06/not-sure-eligible-esa');
         }
       // Jobseeker’s Allowance
       } else if (req.body.benefit === 'jsa') {
@@ -372,7 +369,7 @@ module.exports = {
           } else if (req.body.jsabenefittype === 'jsabenefittype2') {
             res.redirect('/beta06/not-eligible-current-benefits');
           } else {
-            res.redirect('/beta06/not-sure-eligible');
+            res.redirect('/beta06/not-sure-eligible-jsa');
         }
       // Not eligible
       } else {
