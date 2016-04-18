@@ -1,13 +1,13 @@
-{{<govuk_template}}
+{% extends "layout.html" %}
 
-{{$head}}
-  {{>includes/elements_head}}
-{{/head}}
+{% block page_title %}
+  Example - Forms
+{% endblock %}
 
-{{$content}}
+{% block content %}
 <main id="content" role="main">
 
-  <a href="/examples/" class="example-back-link">Back to the GOV.UK prototype kit examples</a>
+  {% include "includes/breadcrumb_examples.html" %}
 
   <form action="/" method="post" class="form">
 
@@ -66,7 +66,7 @@
     <div class="form-group">
       <details>
         <summary><span class="summary">Help with date of birth</span></summary>
-        <div class="panel-indent">
+        <div class="panel panel-border-narrow">
           <p>
             If you don’t know your exact date of birth, use the one you put on official documents (for example, your passport or driving licence).
           </p>
@@ -77,23 +77,11 @@
       </details>
     </div>
 
-
-    <!-- Primary buttons, secondary links -->
     <div class="form-group">
       <input type="submit" class="button" value="Continue">
-      <ul>
-        <li><a href="#">Skip this section for now</a></li>
-        <li><a href="/">Back</a></li>
-      </ul>
     </div>
 
   </form>
 
-</main><!-- / #page-container -->
-{{/content}}
-
-{{$bodyEnd}}
-  {{>includes/elements_scripts}}
-{{/bodyEnd}}
-
-{{/govuk_template}}
+</main>
+{% endblock %}

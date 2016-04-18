@@ -1,13 +1,13 @@
-{{<govuk_template}}
+{% extends "layout.html" %}
 
-{{$head}}
-  {{>includes/elements_head}}
-{{/head}}
+{% block page_title %}
+  Example - Grid layout
+{% endblock %}
 
-{{$content}}
+{% block content %}
 <main id="content" role="main">
 
-  <a href="/examples/" class="example-back-link">Back to the GOV.UK prototype kit examples</a>
+  {% include "includes/breadcrumb_examples.html" %}
 
   <h1 class="heading-xlarge">
     New grid layout example
@@ -118,6 +118,4 @@
   </div>
 
 </main>
-{{/content}}
-
-{{/govuk_template}}
+{% endblock %}
