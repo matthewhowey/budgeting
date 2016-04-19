@@ -507,6 +507,11 @@ module.exports = {
       res.redirect('/beta06/declaration');
     });
 
+    // Declaration
+    app.post('/beta06/declaration', function (req, res) {
+      res.redirect('/beta06/what-happens-next');
+    });
+
 
 
 
