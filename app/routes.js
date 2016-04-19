@@ -525,6 +525,14 @@ module.exports = {
       res.redirect('/sandpit/loan-offer/channel/1-3');
     });
 
+    // loan offer - updates 2
+    app.post('/sandpit/loan-offer/channel/2-1', function (req, res) {
+      res.redirect('/sandpit/loan-offer/channel/2-2');
+    });
+    app.post('/sandpit/loan-offer/channel/2-2', function (req, res) {
+      res.redirect('/sandpit/loan-offer/channel/2-3');
+    });
+
 
 
 		// eligibilityV1
