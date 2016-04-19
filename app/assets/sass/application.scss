@@ -246,11 +246,11 @@ hr.rough--section-links-divider {
 
 .notice {
   background-color: red;
-  padding: 13px 15px 5px 15px;
+  padding: 13px 15px 1px 15px;
   margin-top: 20px;
   @include media(tablet) {
     margin-top: 25px;
-    padding: 13px 20px 5px 20px;
+    padding: 13px 20px 1px 20px;
   }
 }
 
