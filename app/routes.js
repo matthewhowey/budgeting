@@ -513,10 +513,17 @@ module.exports = {
     });
 
 
+    //////////////////////////////////////////////////////////
+    // SANDPIT
+    //////////////////////////////////////////////////////////
 
-
-
-
+    // loan offer - updates 1
+    app.post('/sandpit/loan-offer/channel/1-1', function (req, res) {
+      res.redirect('/sandpit/loan-offer/channel/1-2');
+    });
+    app.post('/sandpit/loan-offer/channel/1-2', function (req, res) {
+      res.redirect('/sandpit/loan-offer/channel/1-3');
+    });
 
 
 
