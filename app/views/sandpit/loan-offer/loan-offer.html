@@ -1,0 +1,59 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  Example without branding
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="notice polite">
+    <h1 class="heading-xlarge">
+      <ul class="list list-bullet">
+        <li>Offer £348</li>
+        <li>Weekly paymemt £6.08</li>
+       </ul>  
+    </h1>
+  </div>
+
+  <p>Dear XXXXXX</p>
+  <p>on 25/12/15 you applied for a £500 Budgeting Loan, we have offered you £348.</p>
+  <p>You will repay the loan at £6.08 a week from your Jobseeker's Allowance.</p>
+  <p>Your re-calculated benefit will be paid at £66.30 per week for the next 57 weeks</p>
+
+<details style="margin-bottom: 1em;">
+            <summary><span class="summary">This amount is based on</span></summary>
+            <div class="panel-indent">
+              <ul class="list-bullet">
+                <li>how much you owe the Social Fund</li>
+                <li>regular dbt repayments</li>
+                <li>how much you can afford to pay each week</li>
+              </ul>
+            </div>
+          </details>
+  
+  <fieldset class="inline">
+
+            <h3 class="heading-medium">Do you want to accept the offer?</h3>
+
+            <label class="block-label" for="radio-inline-1">
+              <input id="radio-inline-1" type="radio" name="choice" value="yes" >
+              Yes
+            </label>
+            <label class="block-label" for="radio-inline-2">
+              <input id="radio-inline-2" type="radio" name="choice" value="no" >
+              No
+            </label>
+
+          </fieldset>
+
+</main>
+
+{% endblock %}
+  
+
+  
+  
+
