@@ -517,13 +517,28 @@ module.exports = {
     // SANDPIT
     //////////////////////////////////////////////////////////
 
-    // loan offer - updates 1
+    // loan offer - channel question
     app.post('/sandpit/loan-offer/channel/1-1', function (req, res) {
       res.redirect('/sandpit/loan-offer/channel/1-2');
     });
     app.post('/sandpit/loan-offer/channel/1-2', function (req, res) {
       res.redirect('/sandpit/loan-offer/channel/1-3');
     });
+    
+    //loan offer - accept/reject
+		app.post('/sandpit/loan-offer/loan-offer', function (req, res) {
+		 	if (req.body.choice === 'yes') {
+		    res.redirect('/sandpit/loan-offer/loan-offer-accept');
+		  } else if (req.body.choice === 'no') {
+		    res.redirect('/sandpit/loan-offer/loan-offer-reject');
+	      }
+	    });
+
+
+
+    //////////////////////////////////////////////////////////
+    // END OF SANDPIT
+    //////////////////////////////////////////////////////////
 
     // loan offer - updates 2
     app.post('/sandpit/loan-offer/channel/2-1', function (req, res) {
