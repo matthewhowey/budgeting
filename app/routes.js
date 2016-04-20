@@ -526,15 +526,14 @@ module.exports = {
     });
     
     //loan offer - accept/reject
-		app.post('/sandpit/loan-offer/loan-offer', function (req, res) {
-		 	if (req.body.choice === 'yes') {
-		    res.redirect('/sandpit/loan-offer/loan-offer-accept');
-		  } else if (req.body.choice === 'no') {
-		    res.redirect('/sandpit/loan-offer/loan-offer-reject');
-	      }
-	    });
-
-
+	app.post('/sandpit/loan-offer/version-1/loan-offer', function (req, res) {
+	 	if (req.body.choice === 'yes') {
+	    res.redirect('/sandpit/loan-offer/version-1/loan-offer-accept');
+	  } else if (req.body.choice === 'no') {
+	    res.redirect('/sandpit/loan-offer/version-1/loan-offer-reject');
+      }
+    });
+    
 
     //////////////////////////////////////////////////////////
     // END OF SANDPIT
