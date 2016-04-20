@@ -525,12 +525,21 @@ module.exports = {
       res.redirect('/sandpit/loan-offer/channel/1-3');
     });
     
-    //loan offer - accept/reject
+    //loan offer - accept/reject version 1
 	app.post('/sandpit/loan-offer/version-1/loan-offer', function (req, res) {
 	 	if (req.body.choice === 'yes') {
 	    res.redirect('/sandpit/loan-offer/version-1/loan-offer-accept');
 	  } else if (req.body.choice === 'no') {
 	    res.redirect('/sandpit/loan-offer/version-1/loan-offer-reject');
+      }
+    });
+
+    //loan offer - accept/reject version 2
+    app.post('/sandpit/loan-offer/version-2/loan-offer', function (req, res) {
+        if (req.body.choice === 'yes') {
+        res.redirect('/sandpit/loan-offer/version-2/loan-offer-accept');
+      } else if (req.body.choice === 'no') {
+        res.redirect('/sandpit/loan-offer/version-2/loan-offer-reject');
       }
     });
     

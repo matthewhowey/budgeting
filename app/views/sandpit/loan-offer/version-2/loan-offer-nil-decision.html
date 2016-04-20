@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+    Apply for a Budgeting Loan
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  {% include "includes/beta-banner.html" %}
+
+  <div class="grid-row">
+
+    <div class="column-two-thirds">
+
+      <div class="notice polite">
+        <h1 class="bold-medium m-t-s m-b-s" style="text-align: center">
+          Your Budgeting Loan application
+        </h1>
+      </div>
+
+      <p>Dear Jane Smith,</p>
+
+      <p>On 25 March 2016 you applied for a Budgeting Loan of £500. After reviewing your application, we are unable to offer you this loan.</p>
+
+      <p>The reason that your application has been unsuccessful is due to the fact that you don&rsquo;t fully meet the full 4 eligibility points below:</p>
+
+      <ul class="list list-bullet">
+        <li>you must not owe the Social Fund more than £1,500 for Crisis Loans and Budgeting Loans</li>
+        <li>you must have been getting Income Support, income-based Jobseeker's Allowance, income-related Employment and Support Allowance or Pension Credit for the past 6 months (and you must still be getting one of these benefits when you apply)</li>
+        <li>you must need £100 or more</li>
+        <li>you must not be involved in industrial action (eg a strike, walkout or lockout)</li>
+      </ul>
+
+      <h3 class="heading-medium">If you&rsquo;re unhappy with this decision</h3>
+      <p>You can ask for a Budgeting Loan decision to be reviewed. To do this, you must write to Jobcentre Plus before 22 April 2016, explaining why you think it was wrong.</p>
+
+      <p><a href="http://los.direct.gov.uk/default.aspx?type=1&amp;lang=en" rel="external">Find your nearest Jobcentre Plus</a></p>
+
+      <p>If you still think the decision was wrong after the review, you can ask for a further review by the office of the <a href="https://www.gov.uk/government/publications/budgeting-loans-how-to-ask-for-a-further-independent-review">Independent Case Examiner</a>. This review should take no longer than 21 working days.</p>
+
+    </div>
+
+  </div>
+
+</main>
+
+{% endblock %}

@@ -62,9 +62,27 @@
 
 // Negative
 
-.m-t-ns {
-  margin-top: -10px;
+.m-b-ns {
+  margin-top: -12px !important;
+  @include media(tablet) {
+    margin-top: -15px !important;
+  }
 }
+
+.m-t-nm {
+  margin-top: -15px;
+  @include media(tablet) {
+    margin-top: -20px;
+  }
+}
+
+.m-t-nl {
+  margin-top: -25px;
+  @include media(tablet) {
+    margin-top: -35px;
+  }
+}
+
 
 // None
 
