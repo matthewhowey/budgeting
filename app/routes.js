@@ -524,6 +524,7 @@ module.exports = {
     app.post('/sandpit/loan-offer/channel/1-2', function (req, res) {
       res.redirect('/sandpit/loan-offer/channel/1-3');
     });
+    
     //loan offer - accept/reject
 		app.post('/sandpit/loan-offer/loan-offer', function (req, res) {
 		 	if (req.body.choice === 'yes') {
