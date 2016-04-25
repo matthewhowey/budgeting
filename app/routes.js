@@ -471,7 +471,16 @@ module.exports = {
 
     // Loan amount
     app.post('/beta06/loan-amount', function (req, res) {
-      res.redirect('/beta06/debt-repayments');
+      res.redirect('/beta06/savings');
+    });
+
+    // Savings
+    app.post('/beta06/savings', function (req, res) {
+      if (req.body.choice === 'yes') {
+        res.redirect('/beta06/debt-repayments');
+      } else if (req.body.choice === 'no') {
+        res.redirect('/beta06/debt-repayments');
+      }
     });
 
     // Debt repayments
