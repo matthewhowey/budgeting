@@ -559,6 +559,17 @@ module.exports = {
         res.redirect('/sandpit/loan-offer/version-2/loan-offer-reject-full');
       }
     });
+
+    //current benefits question
+    app.post('/sandpit/current-benefits-question/v1/current-benefits', function (req, res) {
+        if (req.body.esabenefittype === 'esabenefittype1') {
+        res.redirect('/sandpit/current-benefits-question/v1/current-benefits-esa');
+      } else if (req.body.jsabenefittype === 'jsabenefittype1') {
+        res.redirect('/sandpit/current-benefits-question/v1/current-benefits-jsa');
+      } else if (req.body.choice === 'no') {
+        res.redirect('/sandpit/loan-offer/version-1/loan-offer-reject');
+      }
+    });
     
 
     //////////////////////////////////////////////////////////
