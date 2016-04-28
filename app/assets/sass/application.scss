@@ -245,6 +245,18 @@ hr.rough--section-links-divider {
     position: relative;
 }
 
+
+.error .c-form-input-denote {
+    background-color: $error-colour;
+    color: $page-colour;
+    padding: 9px 12px;
+}
+
+
+.error .c-form-input-denote__input {
+  border-width: 4px !important;
+}
+
 // Notices
 
 .notice {
@@ -261,3 +273,19 @@ hr.rough--section-links-divider {
   background-color: #d5e9f5;
   margin-bottom: 1.5em;
 }
+
+// error summary styles
+
+ul.error-summary-list li {
+  margin-bottom: 10px !important;
+}
+
+ul.error-summary-list li:last-child {
+  margin-bottom: 0!important;
+}
+
+
+
+
+
+
