@@ -543,6 +543,16 @@ module.exports = {
       }
     });
 
+    //loan offer - accept/reject partial offer version 1
+    app.post('/sandpit/loan-offer/version-1/partial-loan-offer', function (req, res) {
+	 	if (req.body.choice === 'yes') {
+	    res.redirect('/sandpit/loan-offer/version-1/partial-loan-offer-accept');
+	  } else if (req.body.choice === 'no') {
+	    res.redirect('/sandpit/loan-offer/version-1/partial-loan-offer-reject');
+      }
+    });
+
+
     //loan offer - accept/reject version 2
     app.post('/sandpit/loan-offer/version-2/loan-offer-partial', function (req, res) {
         if (req.body.choice === 'yes') {
