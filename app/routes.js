@@ -580,6 +580,31 @@ module.exports = {
         res.redirect('/sandpit/loan-offer/version-1/loan-offer-reject');
       }
     });
+
+
+    //DEBT - REPAYMENTS
+
+    //v3 - Previous question to help get an idea of flow
+    app.post('/sandpit/debt-repayments/v3/savings', function (req, res) {
+      res.redirect('/sandpit/debt-repayments/v3/credit-store-cards');
+    });
+
+    //v3 - Credit and store cards
+    app.post('/sandpit/debt-repayments/v3/credit-store-cards', function (req, res) {
+      res.redirect('/sandpit/debt-repayments/v3/loans');
+    });
+    //v3 - Loans
+    app.post('/sandpit/debt-repayments/v3/loans', function (req, res) {
+      res.redirect('/sandpit/debt-repayments/v3/mobile-phone-contract');
+    });
+    //v3 - Mobile phone
+    app.post('/sandpit/debt-repayments/v3/mobile-phone-contract', function (req, res) {
+      res.redirect('/sandpit/debt-repayments/v3/rent-to-own');
+    });
+    //v3 - Rent to own
+    app.post('/sandpit/debt-repayments/v3/rent-to-own', function (req, res) {
+      res.redirect('/sandpit/debt-repayments/v3/about-you');
+    });
     
 
     //////////////////////////////////////////////////////////
