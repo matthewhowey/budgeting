@@ -1,0 +1,29 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  Example without branding
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <h1 class="heading-large">Savings</h1>
+
+  <dl class="hypo">
+    <dt>If:</dt>
+    <dd>We provide subsequent data capture field for when a customer answers 'Yes' to the savings question</dd>
+    <dt>Then:</dt>
+    <dd>Users can enter their full cpaital/savings amount</dd>
+    <dt>Because:</dt>
+    <dd>Users will find it less confusing not having to deduct the savings threshold when answering this question</dd>
+  </dl>
+
+  <ul class="list list-bullet">
+    <li><a href="/sandpit/savings/savings-with-amount-capture">Version 1</a></li>
+    <li><a href="/sandpit/savings/savings-with-amount-capture-validation">Version 1 with validation</a></li>
+  </ul>
+
+</main>
+
+{% endblock %}

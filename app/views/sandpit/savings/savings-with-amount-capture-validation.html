@@ -16,13 +16,25 @@
       {% include "includes/back-link.html" %}
 
       <form method="post" class="form">
+        <div class="error-summary" role="group" style="display:none;">
+          <h1 class="heading-medium error-summary-heading" id="error-summary-heading">
+            There's been a problem
+          </h1>
+
+          <p>
+            Check the following:
+          </p>
+
+          <ul class="error-summary-list">
+          </ul>
+        </div>
 
         <h1 class="heading-large m-b-ml">
           Do you have savings of more than £1,000 (£2,000 if you&rsquo;re over 63)?
         </h1>
         <span class="form-hint">Include all money you have at home as well as in accounts and investments</span>
         <div class="form-group">
-          <fieldset class="inline">
+          <fieldset class="inline" data-required data-error="Choose yes or no">
 
             <legend class="visually-hidden">Do you have savings of more than £1,000 (£2,000 if you&rsquo;re over 63)?</legend>
 
