@@ -606,6 +606,8 @@ module.exports = {
         res.redirect('/sandpit/current-benefits-question/v2/borrow-amount');
       } else if (req.body.jsabenefittype === 'jsabenefittype2') {
         res.redirect('/sandpit/current-benefits-question/v2/current-benefits-jsa');
+      } else if (req.body.jsabenefittype === 'jsabenefittype3') {
+        res.redirect('/sandpit/current-benefits-question/v2/not-eligible-current-benefits');
       // None of the above
       } else {
         res.redirect('/sandpit/current-benefits-question/v2/not-eligible-current-benefits');
@@ -614,10 +616,12 @@ module.exports = {
 
     // Current benefits ESA part
     app.post('/sandpit/current-benefits-question/v2/current-benefits-esa', function (req, res) {
-        if (req.body.type === 'option1') {
+        if (req.body.duration === 'duration1') {
+        res.redirect('/sandpit/current-benefits-question/v2/borrow-amount');
+      } else if (req.body.duration === 'duration2') {
         res.redirect('/sandpit/current-benefits-question/v2/not-eligible-current-benefits');
       } else if (req.body.type === 'option2') {
-        res.redirect('/sandpit/current-benefits-question/v2/borrow-amount');
+        res.redirect('/sandpit/current-benefits-question/v2/not-eligible-current-benefits');
       } else if (req.body.type === 'option3') {
         res.redirect('/sandpit/current-benefits-question/v2/not-sure-eligible-esa');
       }
@@ -625,10 +629,12 @@ module.exports = {
 
     // Current benefits JSA part
     app.post('/sandpit/current-benefits-question/v2/current-benefits-jsa', function (req, res) {
-        if (req.body.type === 'option1') {
+        if (req.body.duration === 'duration1') {
+        res.redirect('/sandpit/current-benefits-question/v2/borrow-amount');
+      } else if (req.body.duration === 'duration2') {
         res.redirect('/sandpit/current-benefits-question/v2/not-eligible-current-benefits');
       } else if (req.body.type === 'option2') {
-        res.redirect('/sandpit/current-benefits-question/v2/borrow-amount');
+        res.redirect('/sandpit/current-benefits-question/v2/not-eligible-current-benefits');
       } else if (req.body.type === 'option3') {
         res.redirect('/sandpit/current-benefits-question/v2/not-sure-eligible-jsa');
       }
