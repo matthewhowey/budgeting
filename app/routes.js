@@ -666,7 +666,32 @@ module.exports = {
     app.post('/sandpit/debt-repayments/v3/rent-to-own', function (req, res) {
       res.redirect('/sandpit/debt-repayments/v3/about-you');
     });
-    
+
+
+    //SAVINGS
+
+    //Single - under 63
+    app.post('/sandpit/savings/v3/savings-under63-single', function (req, res) {
+      res.redirect('/sandpit/savings/v3/savings-under63-single-property');
+    });
+
+    //Single - over 63
+    app.post('/sandpit/savings/v3/savings-over63-single', function (req, res) {
+      res.redirect('/sandpit/savings/v3/savings-over63-single-property');
+    });
+
+    //With partner - under 63
+    app.post('/sandpit/savings/v3/savings-under63-partner', function (req, res) {
+      res.redirect('/sandpit/savings/v3/savings-under63-partner-property');
+    });
+
+    //With partner - over 63
+    app.post('/sandpit/savings/v3/savings-over63-partner', function (req, res) {
+      res.redirect('/sandpit/savings/v3/savings-over63-partner-property');
+    });
+
+
+
 
     //////////////////////////////////////////////////////////
     // END OF SANDPIT
