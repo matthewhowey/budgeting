@@ -227,7 +227,8 @@ hr.rough--section-links-divider {
 
 // £ classes
 
-.c-form-input-denote {
+.c-form-input-denote,
+div.panel .c-form-input-denote {
     position: absolute;
     background-color: rgb(222, 224, 226);
     line-height: 1;
@@ -251,7 +252,6 @@ hr.rough--section-links-divider {
     color: $page-colour;
     padding: 9px 12px;
 }
-
 
 .error .c-form-input-denote__input {
   border-width: 4px !important;
