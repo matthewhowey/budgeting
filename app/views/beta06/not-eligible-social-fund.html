@@ -13,7 +13,10 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      {% include "includes/back-link.html" %}
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('outstanding-social-fund-loans') }}
+      {# Back link #}
 
       <h1 class="heading-large">You&rsquo;re not eligible for a Budgeting&nbsp;Loan</h1>
 

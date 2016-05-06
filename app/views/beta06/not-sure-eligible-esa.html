@@ -13,7 +13,10 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      {% include "includes/back-link.html" %}
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('current-benefits') }}
+      {# Back link #}
 
       <h1 class="heading-large">You need more information to check your eligibility</h1>
 

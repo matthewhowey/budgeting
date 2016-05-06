@@ -19,7 +19,10 @@
 
     <div class="column-two-thirds">
 
-      <a href="../" class="link-back">Back</a>
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('start-eligibility') }}
+      {# Back link #}
 
       <form method="post" class="form">
 

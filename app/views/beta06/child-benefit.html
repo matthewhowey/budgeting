@@ -13,8 +13,11 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      {% include "includes/back-link.html" %}
-
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('#') }}
+      {# Back link #}
+      
       <form method="post" class="form">
 
         <h1 class="heading-large m-b-ml">

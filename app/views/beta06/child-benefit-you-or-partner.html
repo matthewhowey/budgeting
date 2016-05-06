@@ -13,7 +13,10 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      {% include "includes/back-link.html" %}
+      {# Back link #}
+        includes
+        {{ back.url('your-partner') }}
+      {# Back link #}
 
       <form method="post" class="form">
 
