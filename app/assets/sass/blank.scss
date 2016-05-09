@@ -23,6 +23,11 @@ hr {
   clear: both
 }
 
+.single-column {
+  max-width: 650px !important;
+
+}
+
 // Styles for design review landing page-break-inside: 
 
 $mid-screen: 744px;

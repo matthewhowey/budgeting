@@ -640,7 +640,18 @@ module.exports = {
       }
     });
 
+    // Applying for someone else
+    app.post('/sandpit/applying-for-someone-else/v1/', function (req, res) {
+        if (req.body.options === 'yes') {
+        res.redirect('/sandpit/applying-for-someone-else/v1/written-consent');
+      }
+    });
 
+    app.post('/sandpit/applying-for-someone-else/v1/written-consent', function (req, res) {
+        if (req.body.options === 'no') {
+        res.redirect('/sandpit/applying-for-someone-else/v1/written-consent-detail');
+      }
+    });
 
 
     //DEBT - REPAYMENTS
