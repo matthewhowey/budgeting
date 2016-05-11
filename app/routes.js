@@ -656,11 +656,6 @@ module.exports = {
 
     //DEBT - REPAYMENTS
 
-    //v3 - Previous question to help get an idea of flow
-    app.post('/sandpit/debt-repayments/v3/savings', function (req, res) {
-      res.redirect('/sandpit/debt-repayments/v3/credit-store-cards');
-    });
-
     //v3 - Credit and store cards
     app.post('/sandpit/debt-repayments/v3/credit-store-cards', function (req, res) {
       res.redirect('/sandpit/debt-repayments/v3/loans');
@@ -676,6 +671,24 @@ module.exports = {
     //v3 - Rent to own
     app.post('/sandpit/debt-repayments/v3/rent-to-own', function (req, res) {
       res.redirect('/sandpit/debt-repayments/v3/about-you');
+    });
+
+
+    //v5 - Credit and store cards
+    app.post('/sandpit/debt-repayments/v5/credit-store-cards', function (req, res) {
+      res.redirect('/sandpit/debt-repayments/v5/loans');
+    });
+    //v5 - Loans
+    app.post('/sandpit/debt-repayments/v5/loans', function (req, res) {
+      res.redirect('/sandpit/debt-repayments/v5/mobile-phone-contract');
+    });
+    //v5 - Mobile phone
+    app.post('/sandpit/debt-repayments/v5/mobile-phone-contract', function (req, res) {
+      res.redirect('/sandpit/debt-repayments/v5/rent-to-own');
+    });
+    //v5 - Rent to own
+    app.post('/sandpit/debt-repayments/v5/rent-to-own', function (req, res) {
+      res.redirect('/sandpit/debt-repayments/v5/about-you');
     });
 
 
