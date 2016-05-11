@@ -680,10 +680,6 @@ module.exports = {
     });
     //v5 - Loans
     app.post('/sandpit/debt-repayments/v5/loans', function (req, res) {
-      res.redirect('/sandpit/debt-repayments/v5/mobile-phone-contract');
-    });
-    //v5 - Mobile phone
-    app.post('/sandpit/debt-repayments/v5/mobile-phone-contract', function (req, res) {
       res.redirect('/sandpit/debt-repayments/v5/rent-to-own');
     });
     //v5 - Rent to own
