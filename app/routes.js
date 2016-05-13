@@ -640,6 +640,110 @@ module.exports = {
       }
     });
 
+    //Current benefits question - v3
+
+    app.post('/sandpit/current-benefits-question/v3/current-benefits', function (req, res) {
+      // Pension Credit
+      if (req.body.pcbenefittype === 'pcbenefittype1') {
+        res.redirect('/sandpit/current-benefits-question/v3/borrow-amount');
+      } else if (req.body.pcbenefittype === 'pcbenefittype2') {
+        res.redirect('/sandpit/current-benefits-question/v3/not-eligible-current-benefits');
+      // Income Support
+      } else if (req.body.isbenefittype === 'isbenefittype1') {
+        res.redirect('/sandpit/current-benefits-question/v3/borrow-amount');
+      } else if (req.body.isbenefittype === 'isbenefittype2') {
+        res.redirect('/sandpit/current-benefits-question/v3/not-eligible-current-benefits');
+      // Employment and Support
+      } else if (req.body.esabenefittype === 'esabenefittype1') {
+        res.redirect('/sandpit/current-benefits-question/v3/current-benefits-esa-activity-group');
+      } else if (req.body.esabenefittype === 'esabenefittype2') {
+        res.redirect('/sandpit/current-benefits-question/v3/current-benefits-esa');
+      } else if (req.body.esabenefittype === 'esabenefittype3') {
+        res.redirect('/sandpit/current-benefits-question/v3/not-eligible-current-benefits');
+      // Job Seeker’s Allowance
+      } else if (req.body.jsabenefittype === 'jsabenefittype1') {
+        res.redirect('/sandpit/current-benefits-question/v3/borrow-amount');
+      } else if (req.body.jsabenefittype === 'jsabenefittype2') {
+        res.redirect('/sandpit/current-benefits-question/v3/current-benefits-jsa-worked');
+      } else if (req.body.jsabenefittype === 'jsabenefittype3') {
+        res.redirect('/sandpit/current-benefits-question/v3/not-eligible-current-benefits');
+      // None of the above
+      } else {
+        res.redirect('/sandpit/current-benefits-question/v3/not-eligible-current-benefits');
+      }
+    });
+
+    // Current benefits ESA activity group
+
+    app.post('/sandpit/current-benefits-question/v3/current-benefits-esa-activity-group', function (req, res) {
+        if (req.body.duration === 'duration1') {
+        res.redirect('/sandpit/current-benefits-question/v3/borrow-amount');
+      } else {
+        res.redirect('/sandpit/current-benefits-question/v3/current-benefits-esa');
+      }
+    });
+
+    // Current benefits ESA part
+
+    app.post('/sandpit/current-benefits-question/v3/current-benefits-esa', function (req, res) {
+        if (req.body.duration === 'duration1') {
+        res.redirect('/sandpit/current-benefits-question/v3/borrow-amount');
+      } else if (req.body.duration === 'duration2') {
+        res.redirect('/sandpit/current-benefits-question/v3/not-eligible-current-benefits');
+      } else if (req.body.type === 'option2') {
+        res.redirect('/sandpit/current-benefits-question/v3/not-eligible-current-benefits');
+      } else if (req.body.type === 'option3') {
+        res.redirect('/sandpit/current-benefits-question/v3/not-sure-eligible-esa');
+      }
+    });
+
+    app.post('/sandpit/current-benefits-question/v3/current-benefits-esa', function (req, res) {
+        if (req.body.duration === 'duration1') {
+        res.redirect('/sandpit/current-benefits-question/v3/borrow-amount');
+      } else if (req.body.duration === 'duration2') {
+        res.redirect('/sandpit/current-benefits-question/v3/not-eligible-current-benefits');
+      } else if (req.body.type === 'option2') {
+        res.redirect('/sandpit/current-benefits-question/v3/not-eligible-current-benefits');
+      } else if (req.body.type === 'option3') {
+        res.redirect('/sandpit/current-benefits-question/v3/not-sure-eligible-esa');
+      }
+    });
+
+    // Current benefits JSA part
+
+    // hours worked
+    app.post('/sandpit/current-benefits-question/v3/current-benefits-jsa-worked', function (req, res) {
+        if (req.body.duration === 'duration1') {
+        res.redirect('/sandpit/current-benefits-question/v3/not-eligible-current-benefits');
+      } else {
+        res.redirect('/sandpit/current-benefits-question/v3/current-benefits-jsa-partner');
+      }
+    });
+
+    // partner
+    app.post('/sandpit/current-benefits-question/v3/current-benefits-jsa-partner', function (req, res) {
+        if (req.body.duration === 'duration1') {
+        res.redirect('/sandpit/current-benefits-question/v3/current-benefits-jsa-type');
+      } else {
+        res.redirect('/sandpit/current-benefits-question/v3/borrow-amount');
+      }
+    });
+
+
+    app.post('/sandpit/current-benefits-question/v3/current-benefits-jsa-type', function (req, res) {
+        if (req.body.duration === 'duration1') {
+        res.redirect('/sandpit/current-benefits-question/v3/borrow-amount');
+      } else if (req.body.duration === 'duration2') {
+        res.redirect('/sandpit/current-benefits-question/v3/not-eligible-current-benefits');
+      } else if (req.body.type === 'option2') {
+        res.redirect('/sandpit/current-benefits-question/v3/not-eligible-current-benefits');
+      } else if (req.body.type === 'option3') {
+        res.redirect('/sandpit/current-benefits-question/v3/not-sure-eligible-jsa');
+      }
+    });
+
+
+
     // Applying for someone else
     app.post('/sandpit/applying-for-someone-else/v1/', function (req, res) {
         if (req.body.options === 'yes') {
