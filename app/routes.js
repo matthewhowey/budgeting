@@ -684,6 +684,10 @@ module.exports = {
     });
     //v5 - Rent to own
     app.post('/sandpit/debt-repayments/v5/rent-to-own', function (req, res) {
+      res.redirect('/sandpit/debt-repayments/v5/landlord-payments');
+    });
+    //v5 - Landlord payments
+    app.post('/sandpit/debt-repayments/v5/landlord-payments', function (req, res) {
       res.redirect('/sandpit/debt-repayments/v5/about-you');
     });
 
