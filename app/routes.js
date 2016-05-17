@@ -533,7 +533,7 @@ module.exports = {
     app.post('/sandpit/loan-offer/channel/1-2', function (req, res) {
       res.redirect('/sandpit/loan-offer/channel/1-3');
     });
-    
+
     //loan offer - accept/reject version 1
 	app.post('/sandpit/loan-offer/version-1/loan-offer', function (req, res) {
 	 	if (req.body.choice === 'yes') {
@@ -741,6 +741,21 @@ module.exports = {
         res.redirect('/sandpit/current-benefits-question/v3/not-sure-eligible-jsa');
       }
     });
+
+		//Current benefits question v5
+
+		//ESA part
+		app.post('/sandpit/current-benefits-question/v5/current-benefits', function (req, res) {
+				if (req.body.esabenefittype === 'esabenefittype1') {
+				res.redirect('/sandpit/current-benefits-question/v5/not-eligible-current-benefits');
+			} else if (req.body.esabenefittype === 'esabenefittype2') {
+				res.redirect('/sandpit/current-benefits-question/v5/esa-budgeting-loan-before');
+			} else if (req.body.type === 'option2') {
+				res.redirect('/sandpit/current-benefits-question/v5/not-eligible-current-benefits');
+			} else if (req.body.type === 'option3') {
+				res.redirect('/sandpit/current-benefits-question/v5/not-sure-eligible-esa');
+			}
+		});
 
 
 
@@ -1020,7 +1035,7 @@ module.exports = {
 
 app.post('/eligibility-v3/before-you-start', function (req, res) {
 
-			
+
 		});
 
 		app.post('/eligibility-v3/less-than-100', function (req, res) {
@@ -1034,14 +1049,14 @@ app.post('/eligibility-v3/before-you-start', function (req, res) {
 		app.post('/eligibility-v3/social-fund-debt', function (req, res) {
 			if (req.body.socialfund === 'No') {
 				res.redirect('/eligibility-v3/savings')
-			} else if (req.body.socialfund ==='Yes') { 
+			} else if (req.body.socialfund ==='Yes') {
 				res.redirect('/eligibility-v3/eligibility-exit-social-fund-la')
-			} else { 
+			} else {
 				res.redirect('/eligibility-v3/eligibility-exit-social-fund')
 			}
 
 		});
-			
+
 		app.post('/eligibility-v3/savings', function (req, res) {
 			if (req.body.savings === 'No') {
 				res.redirect('/eligibility-v3/industrial-action')
@@ -1058,14 +1073,14 @@ app.post('/eligibility-v3/before-you-start', function (req, res) {
 				res.redirect('/eligibility-v3/eligibility-exit-industrial-action')
 			}
 
-		});	
+		});
 
 		app.post('/eligibility-v3/about-benefit', function (req, res) {
 			var hasEnoughBenefit=(
 				req.body.incomesupport6 === 'Yes' ||
 				req.body.pensioncredit6 === 'Yes' ||
 				req.body.jsa6 === 'Yes' ||
-				req.body.esa6 === 'Yes' 
+				req.body.esa6 === 'Yes'
 			)
 			var needsMoreInfo=(
 				req.body.esatype === 'Unsure' ||
@@ -1116,7 +1131,7 @@ app.post('/eligibility-v3/before-you-start', function (req, res) {
 
 		app.post('/eligibility-v4/before-you-start', function (req, res) {
 
-			
+
 		});
 
 		app.post('/eligibility-v4/less-than-100', function (req, res) {
@@ -1130,14 +1145,14 @@ app.post('/eligibility-v3/before-you-start', function (req, res) {
 		app.post('/eligibility-v4/social-fund-debt', function (req, res) {
 			if (req.body.socialfund === 'No') {
 				res.redirect('/eligibility-v4/about-benefit')
-			} else if (req.body.socialfund ==='Yes') { 
+			} else if (req.body.socialfund ==='Yes') {
 				res.redirect('/eligibility-v4/eligibility-exit-social-fund-la')
-			} else { 
+			} else {
 				res.redirect('/eligibility-v4/eligibility-exit-social-fund')
 			}
 
 		});
-			
+
 		app.post('/eligibility-v4/savings', function (req, res) {
 			if (req.body.savings === 'No') {
 				res.redirect('/eligibility-v4/industrial-action')
@@ -1154,14 +1169,14 @@ app.post('/eligibility-v3/before-you-start', function (req, res) {
 				res.redirect('/eligibility-v4/eligibility-exit-industrial-action')
 			}
 
-		});	
+		});
 
 		app.post('/eligibility-v4/about-benefit', function (req, res) {
 			var hasEnoughBenefit=(
 				req.body.incomesupport6 === 'Yes' ||
 				req.body.pensioncredit6 === 'Yes' ||
 				req.body.jsalength === 'Yes' ||
-				req.body.esalength === 'Yes' 
+				req.body.esalength === 'Yes'
 			)
 			var needsMoreInfo=(
 				req.body.esatype === 'Unsure' ||
@@ -1212,7 +1227,7 @@ app.post('/eligibility-v3/before-you-start', function (req, res) {
 
 		app.post('/eligibility-v5/before-you-start', function (req, res) {
 
-			
+
 		});
 
 		app.post('/eligibility-v5/less-than-100', function (req, res) {
@@ -1226,9 +1241,9 @@ app.post('/eligibility-v3/before-you-start', function (req, res) {
 		app.post('/eligibility-v5/social-fund-debt', function (req, res) {
 			if (req.body.socialfund === 'No') {
 				res.redirect('/eligibility-v5/about-benefit')
-			} else if (req.body.socialfund ==='Yes') { 
+			} else if (req.body.socialfund ==='Yes') {
 				res.redirect('/eligibility-v5/eligibility-exit-social-fund-la')
-			} else { 
+			} else {
 				res.redirect('/eligibility-v5/eligibility-exit-social-fund')
 			}
 
@@ -1241,14 +1256,14 @@ app.post('/eligibility-v3/before-you-start', function (req, res) {
 				res.redirect('/eligibility-v5/eligibility-exit-industrial-action')
 			}
 
-		});	
+		});
 
 		app.post('/eligibility-v5/about-benefit', function (req, res) {
 			var hasEnoughBenefit=(
 				req.body.incomesupport6 === 'Yes' ||
 				req.body.pensioncredit6 === 'Yes' ||
 				req.body.jsalength === 'Yes' ||
-				req.body.esalength === 'Yes' 
+				req.body.esalength === 'Yes'
 			)
 			var needsMoreInfo=(
 				req.body.esatype === 'Unsure' ||
@@ -1340,7 +1355,7 @@ app.post('/eligibility-v3/before-you-start', function (req, res) {
 		//MVPv02
 		app.post('/MVPv02/before-you-start', function (req, res) {
 
-			
+
 		});
 
 		app.post('/MVPv02/less-than-100', function (req, res) {
@@ -1354,9 +1369,9 @@ app.post('/eligibility-v3/before-you-start', function (req, res) {
 		app.post('/MVPv02/social-fund-debt', function (req, res) {
 			if (req.body.socialfund === 'No') {
 				res.redirect('/MVPv02/about-benefit')
-			} else if (req.body.socialfund ==='Yes') { 
+			} else if (req.body.socialfund ==='Yes') {
 				res.redirect('/MVPv02/eligibility-exit-social-fund-la')
-			} else { 
+			} else {
 				res.redirect('/MVPv02/eligibility-exit-social-fund')
 			}
 
@@ -1369,14 +1384,14 @@ app.post('/eligibility-v3/before-you-start', function (req, res) {
 				res.redirect('/MVPv02/eligibility-exit-industrial-action')
 			}
 
-		});	
+		});
 
 		app.post('/MVPv02/about-benefit', function (req, res) {
 			var hasEnoughBenefit=(
 				req.body.incomesupport6 === 'Yes' ||
 				req.body.pensioncredit6 === 'Yes' ||
 				req.body.jsalength === 'Yes' ||
-				req.body.esalength === 'Yes' 
+				req.body.esalength === 'Yes'
 			)
 			var needsMoreInfo=(
 				req.body.esatype === 'Unsure' ||
