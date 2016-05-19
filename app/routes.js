@@ -521,6 +521,11 @@ module.exports = {
 			res.redirect('/beta06/what-happens-next');
 		});
 
+		// Incude Beta 07 routes file
+
+		// {% include "beta07-routes.js" %}
+		// require('beta07-routes.js')(app);
+
 
 		//////////////////////////////////////////////////////////
 		// SANDPIT
@@ -757,9 +762,9 @@ module.exports = {
 			} else if (req.body.isbenefittype === 'isbenefittype2') {
 				res.redirect('/sandpit/current-benefits-question/v5/not-eligible-current-benefits');
 				// Employment and Support
-			} else if (req.body.esabenefittype === 'esabenefittype1') {
-				res.redirect('/sandpit/current-benefits-question/v5/not-eligible-current-benefits');
 			} else if (req.body.esabenefittype === 'esabenefittype2') {
+				res.redirect('/sandpit/current-benefits-question/v5/not-eligible-current-benefits');
+			} else if (req.body.esabenefittype === 'esabenefittype1') {
 				res.redirect('/sandpit/current-benefits-question/v5/esa-budgeting-loan-before');
 				// Job Seeker’s Allowance
 			} else if (req.body.jsabenefittype === 'jsabenefittype1') {
@@ -828,7 +833,7 @@ module.exports = {
 
 			app.post('/sandpit/current-benefits-question/v5/jsa-worked', function (req, res) {
 				if (req.body.choice === 'no') {
-					res.redirect('/sandpit/current-benefits-question/v5/jsa-partner');
+					res.redirect('/sandpit/current-benefits-question/v5/borrow-amount');
 				} else if (req.body.duration === 'duration1') {
 					res.redirect('/sandpit/current-benefits-question/v5/not-eligible-current-benefits');
 				}	else if (req.body.duration === 'duration2') {
