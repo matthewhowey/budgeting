@@ -259,6 +259,8 @@ div.panel .c-form-input-denote {
 
 // Notices
 
+// Phasing these out
+
 .notice {
   background-color: red;
   padding: 13px 15px 1px 15px;
@@ -270,8 +272,19 @@ div.panel .c-form-input-denote {
 }
 
 .notice.polite {
-  background-color: #d5e9f5;
-  margin-bottom: 1.5em;
+  border-color: $light-blue;
+  background-color: mix(white, $light-blue, 86%);
+}
+
+// Ends phasing these out
+
+h1 + .panel {
+  margin-top: 38px;
+}
+
+.panel.style1 {
+  border-color: $light-blue;
+  background-color: mix(white, $light-blue, 90%);
 }
 
 // error summary styles
