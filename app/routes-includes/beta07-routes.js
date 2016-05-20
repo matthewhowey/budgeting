@@ -145,7 +145,7 @@ module.exports = function (app) {
     }
   });
 
-  // Eligable
+  // Eligible
   app.post('/beta07/eligible', function (req, res) {
     res.redirect('/beta07/partner');
   });
