@@ -15,7 +15,7 @@
 
       {# Back link #}
         {% import "includes/back-link.html" as back %}
-        {{ back.url('#') }}
+        {{ back.url('esa-budgeting-loan-before') }}
       {# Back link #}
 
       <form method="post" class="form">
@@ -27,29 +27,30 @@
           Which type of Employment and Support Allowance do you get?
         </h1>
 
-        <p>Helper text explaining where they can find this - letter etc</p>
-
         <div class="form-group">
 
           <fieldset>
 
             <legend class="c-legend c-legend--medium m-b-s visually-hidden">Which type of Employment and Support Allowance do you get?</legend>
-                <label class="block-label" for="esabenefittype1">
-                  <input id="esabenefittype1" type="radio" name="esabenefittype" value="esabenefittype1">
-                  Income related
-                </label>
 
-                <label class="block-label" for="esabenefittype2">
-                  <input id="esabenefittype2" type="radio" name="esabenefittype" value="esabenefittype2" >
-                  Contribution based
-                </label>
+            <label class="block-label" for="esabenefittype1">
+              <input id="esabenefittype1" type="radio" name="esabenefittype" value="esabenefittype1">
+              <span class="heading-small">Income-related <abbr title="Employment and Support Allowance">ESA</abbr></span><br>
+              Usually you get this on its own or on top of contribution-based <abbr title="Employment and Support Allowance">ESA</abbr>, if you&rsquo;re on a low income
+            </label>
 
-                <label class="block-label" for="esabenefittype3">
-                  <input id="esabenefittype3" type="radio" name="esabenefittype" value="esabenefittype3" >
-                  Don&rsquo;t know
-                </label>
+            <label class="block-label" for="esabenefittype2">
+              <input id="esabenefittype2" type="radio" name="esabenefittype" value="esabenefittype2" >
+              <span class="heading-small">Contribution-based <abbr title="Employment and Support Allowance">ESA</abbr></span><br>
+              Usually you get this if you&rsquo;ve got enough National Insurance contributions
+            </label>
 
-              </fieldset>
+            <label class="block-label" for="esabenefittype3">
+              <input id="esabenefittype3" type="radio" name="esabenefittype" value="esabenefittype3" >
+              Don&rsquo;t know
+            </label>
+
+          </fieldset>
 
         </div>{# / form-group #}
 
