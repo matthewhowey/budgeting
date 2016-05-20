@@ -2,13 +2,13 @@ module.exports = {
 
 	bind : function (app) {
 
-		app.get('/', function (req, res) {
-			res.render('index');
-		});
+    app.get('/', function (req, res) {
+      res.render('index');
+    });
 
-		app.get('/examples/template-data', function (req, res) {
-			res.render('examples/template-data', { 'name' : 'Foo' });
-		});
+    app.get('/examples/template-data', function (req, res) {
+      res.render('examples/template-data', { 'name' : 'Foo' });
+    });
 
 		// add your routes here
 		app.post('/alpha06/about-benefit', function (req, res) {
@@ -521,10 +521,8 @@ module.exports = {
 			res.redirect('/beta06/what-happens-next');
 		});
 
-		// Incude Beta 07 routes file
-
-		// {% include "beta07-routes.js" %}
-		// require('beta07-routes.js')(app);
+		// Include Beta 07 routes file
+    require('./routes-includes/beta07-routes.js')(app);
 
 
 		//////////////////////////////////////////////////////////
