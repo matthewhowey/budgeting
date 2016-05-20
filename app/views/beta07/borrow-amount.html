@@ -14,9 +14,9 @@
     <div class="column-two-thirds">
 
       {# Back link #}
-  {% import "includes/back-link.html" as back %}
-  {{ back.url('#') }}
-{# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('javascript:history.back()') }}
+      {# Back link #}
 
       <form method="post" class="form">
 

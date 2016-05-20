@@ -8,18 +8,15 @@
 
 <main id="content" role="main">
 
-  <div class="phase-banner">
-    <p>
-      <strong class="phase-tag">BETA</strong>
-      <span>This is a new service – your <a href="#">feedback</a> will help us to improve it.</span>
-    </p>
-  </div>{# /phase-banner #}
+{% include "includes/beta-banner.html" %}
 
   <div class="grid-row">
-
     <div class="column-two-thirds">
 
-      <a href="../" class="link-back">Back</a>
+      {# Back link #}
+        {% import "includes/back-link.html" as back %}
+        {{ back.url('outstanding-social-fund-loans') }}
+      {# Back link #}
 
       <form method="post" class="form">
 

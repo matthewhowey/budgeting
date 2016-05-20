@@ -175,7 +175,7 @@ module.exports = function (app) {
 
   // Child benefit
   app.post('/beta07/child-benefit', function (req, res) {
-    res.redirect('/beta07/loan-amount');
+    res.redirect('/beta07/repayments-credit-store-cards');
   });
 
   // Child benefit (you or your partner)
