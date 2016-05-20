@@ -10,7 +10,7 @@ module.exports = {
       res.render('examples/template-data', { 'name' : 'Foo' });
     });
 
-		// Include Alpha routes
+	// Include Alpha routes
     require('./routes-includes/alpha06-routes.js')(app);
     require('./routes-includes/alpha07-routes.js')(app);
 
@@ -22,6 +22,10 @@ module.exports = {
     require('./routes-includes/beta05-routes.js')(app);
     require('./routes-includes/beta06-routes.js')(app);
     require('./routes-includes/beta07-routes.js')(app);
+
+    // Include MVP routes
+    require('./routes-includes/mvp01-routes.js')(app);
+    require('./routes-includes/mvp02-routes.js')(app);
 
 		//////////////////////////////////////////////////////////
 		// SANDPIT
@@ -230,7 +234,6 @@ module.exports = {
 			}
 		});
 
-
 		app.post('/sandpit/current-benefits-question/v3/current-benefits-jsa-type', function (req, res) {
 			if (req.body.duration === 'duration1') {
 				res.redirect('/sandpit/current-benefits-question/v3/borrow-amount');
@@ -435,8 +438,6 @@ module.exports = {
 			});
 
 
-
-
 			//////////////////////////////////////////////////////////
 			// END OF SANDPIT
 			//////////////////////////////////////////////////////////
@@ -448,8 +449,6 @@ module.exports = {
 			app.post('/sandpit/loan-offer/channel/2-2', function (req, res) {
 				res.redirect('/sandpit/loan-offer/channel/2-3');
 			});
-
-
 
 			// eligibilityV1
 			app.post('/eligibilityV1/less-than-100', function (req, res) {
@@ -911,132 +910,5 @@ module.exports = {
 				}
 			});
 
-
-			// MVPv01
-			app.post('/MVPv01/about-benefit', function (req, res) {
-				if (req.body.benefit === 'Yes') {
-					res.redirect('/MVPv01/partner')
-				} else {
-					res.redirect('/MVPv01/overview')
-				}
-			});
-
-			app.post('/MVPv01/partner', function (req, res) {
-				if (req.body.partner === 'Yes') {
-					res.redirect('/MVPv01/partner-yes')
-				} else {
-					res.redirect('/MVPv01/partner-no')
-				}
-			});
-
-			app.post('/MVPv01/money-you-owe', function (req, res) {
-				if (req.body.partner === 'Yes') {
-					res.redirect('/MVPv01/debt-repayment')
-				} else {
-					res.redirect('/MVPv01/personal-details')
-				}
-			});
-
-			app.post('/MVPv01/children', function (req, res) {
-				if (req.body.children === 'Yes') {
-					res.redirect('/MVPv01/loan-amount-child')
-				} else {
-					res.redirect('/MVPv01/loan-amount-partner')
-				}
-			});
-
-			app.post('/MVPv01/children-no-partner', function (req, res) {
-				if (req.body.children === 'Yes') {
-					res.redirect('/MVPv01/loan-amount-child-single')
-				} else {
-					res.redirect('/MVPv01/loan-amount-single')
-				}
-			});
-
-			//MVPv02
-			app.post('/MVPv02/before-you-start', function (req, res) {
-
-
-			});
-
-			app.post('/MVPv02/less-than-100', function (req, res) {
-				if (req.body.lt100 === 'No') {
-					res.redirect('/MVPv02/eligibility-exit-100')
-				} else {
-					res.redirect('/MVPv02/industrial-action')
-				}
-			});
-
-			app.post('/MVPv02/social-fund-debt', function (req, res) {
-				if (req.body.socialfund === 'No') {
-					res.redirect('/MVPv02/about-benefit')
-				} else if (req.body.socialfund ==='Yes') {
-					res.redirect('/MVPv02/eligibility-exit-social-fund-la')
-				} else {
-					res.redirect('/MVPv02/eligibility-exit-social-fund')
-				}
-
-			});
-
-			app.post('/MVPv02/industrial-action', function (req, res) {
-				if (req.body.industrialaction=== 'No') {
-					res.redirect('/MVPv02/eligibility-confirmation')
-				} else {
-					res.redirect('/MVPv02/eligibility-exit-industrial-action')
-				}
-
-			});
-
-			app.post('/MVPv02/about-benefit', function (req, res) {
-				var hasEnoughBenefit=(
-					req.body.incomesupport6 === 'Yes' ||
-					req.body.pensioncredit6 === 'Yes' ||
-					req.body.jsalength === 'Yes' ||
-					req.body.esalength === 'Yes'
-				)
-				var needsMoreInfo=(
-					req.body.esatype === 'Unsure' ||
-					req.body.jsatype === 'Unsure'
-				)
-				if (hasEnoughBenefit){
-					res.redirect('/MVPv02/less-than-100')
-				} else if (needsMoreInfo){
-					res.redirect('/MVPv02/eligibility-exit-benefit')
-				} else {
-					res.redirect('/MVPv02/eligibility-exit-benefit-la')
-				}
-			});
-
-			app.post('/MVPv02/partner', function (req, res) {
-				if (req.body.partner === 'Yes') {
-					res.redirect('/MVPv02/partner-yes')
-				} else {
-					res.redirect('/MVPv02/partner-no')
-				}
-			});
-
-			app.post('/MVPv02/debt-repayments-partner', function (req, res) {
-				if (req.body.partner === 'Yes') {
-					res.redirect('/MVPv02/debt-repayment')
-				} else {
-					res.redirect('/MVPv02/personal-details')
-				}
-			});
-
-			app.post('/MVPv02/children', function (req, res) {
-				if (req.body.children === 'Yes') {
-					res.redirect('/MVPv02/loan-amount-child')
-				} else {
-					res.redirect('/MVPv02/loan-amount-partner')
-				}
-			});
-
-			app.post('/MVPv02/children-no-partner', function (req, res) {
-				if (req.body.children === 'Yes') {
-					res.redirect('/MVPv02/loan-amount-child-single')
-				} else {
-					res.redirect('/MVPv02/loan-amount-single')
-				}
-			});
-		}
 	}
+}
