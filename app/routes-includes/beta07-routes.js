@@ -204,7 +204,7 @@ module.exports = function (app) {
 
   // Loan amount
   app.post('/beta07/loan-amount', function (req, res) {
-    res.redirect('/beta07/savings-under63-partner');
+    res.redirect('/beta07/about-you');
   });
 
   // About you
