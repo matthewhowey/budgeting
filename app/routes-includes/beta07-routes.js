@@ -45,64 +45,64 @@ module.exports = function (app) {
 
     //Current Benefits ESA part
     app.post('/beta07/esa-budgeting-loan-before', function (req, res) {
-        if (req.body.esabenefitbefore === 'esabenefitbefore1') {
-            res.redirect('/beta07/esa-change-of-circumstances');
-        } else {
-            res.redirect('/beta07/esa-benefit-type');
-        }
+      if (req.body.esabenefitbefore === 'esabenefitbefore1') {
+        res.redirect('/beta07/esa-change-of-circumstances');
+      } else {
+        res.redirect('/beta07/esa-activity-group');
+    }
   });
 
     app.post('/beta07/esa-change-of-circumstances', function (req, res) {
-        if (req.body.choice === 'yes') {
-            res.redirect('/beta07/esa-benefit-type');
-        } else {
-            res.redirect('/beta07/borrow-amount');
-        }
+      if (req.body.choice === 'yes') {
+        res.redirect('/beta07/esa-benefit-type');
+      } else {
+        res.redirect('/beta07/borrow-amount');
+    }
   });
 
-    app.post('/beta07/esa-benefit-type', function (req, res) {
-        if (req.body.esabenefittype === 'esabenefittype1') {
-            res.redirect('/beta07/borrow-amount');
-        } else if (req.body.esabenefittype === 'esabenefittype2') {
-            res.redirect('/beta07/not-eligible-current-benefits');
-        } else if (req.body.esabenefittype === 'esabenefittype3') {
-            res.redirect('/beta07/esa-activity-group');
-        }
-    });
+  app.post('/beta07/esa-activity-group', function (req, res) {
+    if (req.body.duration === 'duration1') {
+        res.redirect('/beta07/borrow-amount');
+    } else {
+      res.redirect('/beta07/esa-benefit-type');
+    }
+  });
 
-    app.post('/beta07/esa-activity-group', function (req, res) {
-        if (req.body.duration === 'duration1') {
-            res.redirect('/beta07/borrow-amount');
-        } else {
-            res.redirect('/beta07/not-sure-eligible-esa');
-        }
-    });
+  app.post('/beta07/esa-benefit-type', function (req, res) {
+    if (req.body.esabenefittype === 'esabenefittype1') {
+        res.redirect('/beta07/borrow-amount');
+    } else if (req.body.esabenefittype === 'esabenefittype2') {
+        res.redirect('/beta07/not-eligible-current-benefits');
+    } else if (req.body.esabenefittype === 'esabenefittype3') {
+        res.redirect('/beta07/not-sure-eligible-esa');
+    }
+  });
 
     //Current Benefits JSA part
     app.post('/beta07/jsa-budgeting-loan-before', function (req, res) {
-        if (req.body.esabenefitbefore === 'esabenefitbefore1') {
-            res.redirect('/beta07/jsa-change-of-circumstances');
-        } else {
-            res.redirect('/beta07/jsa-worked');
-        }
+      if (req.body.esabenefitbefore === 'esabenefitbefore1') {
+        res.redirect('/beta07/jsa-change-of-circumstances');
+      } else {
+          res.redirect('/beta07/jsa-worked');
+      }
     });
 
     app.post('/beta07/jsa-change-of-circumstances', function (req, res) {
-        if (req.body.choice === 'yes') {
-            res.redirect('/beta07/jsa-worked');
-        } else {
-            res.redirect('/beta07/borrow-amount');
-        }
+      if (req.body.choice === 'yes') {
+        res.redirect('/beta07/jsa-worked');
+      } else {
+        res.redirect('/beta07/borrow-amount');
+      }
     });
 
     app.post('/beta07/jsa-worked', function (req, res) {
-        if (req.body.choice === 'no') {
-            res.redirect('/beta07/borrow-amount');
-        } else if (req.body.duration === 'duration1') {
-            res.redirect('/beta07/not-eligible-current-benefits');
-        }   else if (req.body.duration === 'duration2') {
-                res.redirect('/beta07/jsa-partner');
-        }
+      if (req.body.choice === 'no') {
+        res.redirect('/beta07/borrow-amount');
+      } else if (req.body.duration === 'duration1') {
+          res.redirect('/beta07/not-eligible-current-benefits');
+        } else if (req.body.duration === 'duration2') {
+          res.redirect('/beta07/jsa-partner');
+      }
     });
 
     app.post('/beta07/jsa-partner', function (req, res) {
