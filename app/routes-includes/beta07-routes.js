@@ -54,7 +54,7 @@ module.exports = function (app) {
 
     app.post('/beta07/esa-change-of-circumstances', function (req, res) {
       if (req.body.choice === 'yes') {
-        res.redirect('/beta07/esa-benefit-type');
+        res.redirect('/beta07/esa-activity-group');
       } else {
         res.redirect('/beta07/borrow-amount');
     }
