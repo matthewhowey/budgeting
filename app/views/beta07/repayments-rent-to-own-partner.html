@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Landlord payments - Budgeting Loans - GOV.UK
+  Rental purchases - Budgeting Loans - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -15,20 +15,22 @@
 
       {# Back link #}
         {% import "includes/back-link.html" as back %}
-        {{ back.url('repayments-rent-to-own') }}
+        {{ back.url('repayments-loans') }}
       {# Back link #}
 
       <form method="post" class="form">
 
         <h1 class="form-title heading-large m-b-ml">
-        Do you or your partner owe any money to your landlord?
+        Do you or your partner have any rental purchases?<br />(Also known as rent-to-own)
         </h1>
+
+        <p>Include any items such as furniture, consumer electronics, motor vehicles with the option to purchase at some point during the agreement.</p>
 
         <div class="form-group">
           <fieldset class="inline">
 
             <legend class="visuallyhidden">
-              Do you or your partner owe any money to your landlord?
+              Do you or your partner have any rental purchases? (Also known as rent-to-own)
             </legend>
 
             <label class="block-label" for="radio-home-address" data-target="debt-details">
@@ -44,7 +46,7 @@
             <div class="panel panel-border-narrow js-hidden" id="debt-details">
 
               <div class="form-group m-b-ml">
-                <label class="form-label m-b-xs" for="regpay01">On top of your regular payments, how much do you pay back each month on this debt?</label>
+                <label class="form-label m-b-xs" for="regpay01">How much do you pay back each month?</label>
                 <div class="u-1/4-lap-and-up">
                   <span class="c-form-input-denote">&pound;</span>
                   <input class="c-form-input-denote__input form-control form-control-1-4" id="regpay01" type="text" name="regpay01" value="">

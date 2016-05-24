@@ -180,7 +180,7 @@ module.exports = function (app) {
 
   // Child benefit (you or your partner)
   app.post('/beta07/child-benefit-you-or-partner', function (req, res) {
-    res.redirect('/beta07/repayments-credit-store-cards');
+    res.redirect('/beta07/repayments-credit-store-cards-partner');
   });
 
   // Debt repayments
@@ -189,21 +189,41 @@ module.exports = function (app) {
     app.post('/beta07/repayments-credit-store-cards', function (req, res) {
       res.redirect('/beta07/repayments-loans');
     });
+    // Credit and store cards (partner)
+    app.post('/beta07/repayments-credit-store-cards-partner', function (req, res) {
+      res.redirect('/beta07/repayments-loans-partner');
+    });
     // Loans
     app.post('/beta07/repayments-loans', function (req, res) {
       res.redirect('/beta07/repayments-rent-to-own');
+    });
+    // Loans (partner)
+    app.post('/beta07/repayments-loans-partner', function (req, res) {
+      res.redirect('/beta07/repayments-rent-to-own-partner');
     });
     // Rent to own
     app.post('/beta07/repayments-rent-to-own', function (req, res) {
       res.redirect('/beta07/repayments-landlord-payments');
     });
+    // Rent to own (partner)
+    app.post('/beta07/repayments-rent-to-own-partner', function (req, res) {
+      res.redirect('/beta07/repayments-landlord-payments-partner');
+    });
     // Landlord payments
     app.post('/beta07/repayments-landlord-payments', function (req, res) {
       res.redirect('/beta07/loan-amount');
     });
+    // Landlord payments (partner)
+    app.post('/beta07/repayments-landlord-payments-partner', function (req, res) {
+      res.redirect('/beta07/loan-amount-partner');
+    });
 
   // Loan amount
   app.post('/beta07/loan-amount', function (req, res) {
+    res.redirect('/beta07/about-you');
+  });
+  // Loan amount (partner)
+  app.post('/beta07/loan-amount-partner', function (req, res) {
     res.redirect('/beta07/about-you');
   });
 
