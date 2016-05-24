@@ -224,25 +224,41 @@ module.exports = function (app) {
   });
   // Loan amount (partner)
   app.post('/beta07/loan-amount-partner', function (req, res) {
-    res.redirect('/beta07/about-you');
+    res.redirect('/beta07/about-you-partner');
   });
 
   // About you
   app.post('/beta07/about-you', function (req, res) {
     res.redirect('/beta07/your-contact-details');
   });
+  // About you (partner)
+  app.post('/beta07/about-you-partner', function (req, res) {
+    res.redirect('/beta07/your-contact-details-partner');
+  });
 
   // Your contact details
   app.post('/beta07/your-contact-details', function (req, res) {
+    res.redirect('/beta07/savings-under63');
+  });
+  // Your contact details (partner)
+  app.post('/beta07/your-contact-details-partner', function (req, res) {
     res.redirect('/beta07/savings-under63-partner');
   });
 
   // Savings
     // Amount of savings
+    app.post('/beta07/savings-under63', function (req, res) {
+      res.redirect('/beta07/savings-under63-property');
+    });
+    // Amount of savings (partner)
     app.post('/beta07/savings-under63-partner', function (req, res) {
       res.redirect('/beta07/savings-under63-partner-property');
     });
     // Property
+    app.post('/beta07/savings-under63-property', function (req, res) {
+      res.redirect('/beta07/declaration');
+    });
+    // Property (partner)
     app.post('/beta07/savings-under63-partner-property', function (req, res) {
       res.redirect('/beta07/declaration');
     });

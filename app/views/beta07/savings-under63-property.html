@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Savings - Budgeting Loans - GOV.UK
+  Property - Budgeting Loans - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -15,21 +15,23 @@
 
       {# Back link #}
         {% import "includes/back-link.html" as back %}
-        {{ back.url('#') }}
+        {{ back.url('savings-under63-partner') }}
       {# Back link #}
 
       <form method="post" class="form">
 
         <h1 class="heading-large m-b-ml">
-          Do you have savings of more than £1,000 (£2,000 if you&rsquo;re over 63)?
+          Do you own any property that you don&rsquo;t live in?
         </h1>
 
         <div class="form-group">
           <fieldset class="inline">
 
-            <legend class="visually-hidden">Do you have savings of more than £1,000 (£2,000 if you&rsquo;re over 63)?</legend>
+            <legend class="visually-hidden">Do you or your partner own any property that you don&rsquo;t live in?</legend>
 
-            <label class="block-label" for="savings-1">
+            <p>For example, a house you let out, a holiday home, or somewhere another member of your family lives.</p>
+
+            <label class="block-label" data-target="savings-amount" for="savings-1">
               <input id="savings-1" type="radio" name="choice" value="yes" >
               Yes
             </label>
@@ -39,6 +41,20 @@
             </label>
 
           </fieldset>
+
+          <div class="panel panel-border-narrow js-hidden m-b-0" id="savings-amount">
+
+            <label class="form-label m-b-xs" for="savings-amount-total">
+              How much is this property worth?
+            </label>
+
+            <div class="u-1/4-lap-and-up">
+              <span class="c-form-input-denote">&pound;</span>
+              <input class="c-form-input-denote__input form-control form-control-1-4" id="savings-amount-total" type="text" name="savings-amount-total" value="">
+            </div>
+
+          </div>{# / panel #}
+
         </div>{# / form-group #}
 
         <div class="form-group">

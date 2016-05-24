@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Property - Budgeting Loans - GOV.UK
+  Savings - Budgeting Loans - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -15,21 +15,21 @@
 
       {# Back link #}
         {% import "includes/back-link.html" as back %}
-        {{ back.url('savings-under63-partner') }}
+        {{ back.url('your-contact-details') }}
       {# Back link #}
 
       <form method="post" class="form">
 
         <h1 class="heading-large m-b-ml">
-          Do you or your partner own any property that you don&rsquo;t live in?
+          Do you have savings of more than &pound;1,000?
         </h1>
 
         <div class="form-group">
           <fieldset class="inline">
 
-            <legend class="visually-hidden">Do you or your partner own any property that you don&rsquo;t live in?</legend>
+            <legend class="visually-hidden">Do you or your partner have savings of more than &pound;1,000?</legend>
 
-            <p>For example, a house you let out, a holiday home, or somewhere another member of your family lives.</p>
+            <p>This includes any money you have at home, in the bank, in the building society or in a credit union account. This also includes premium bonds, investments, such as shares or unit trusts.</p>
 
             <label class="block-label" data-target="savings-amount" for="savings-1">
               <input id="savings-1" type="radio" name="choice" value="yes" >
@@ -45,7 +45,7 @@
           <div class="panel panel-border-narrow js-hidden m-b-0" id="savings-amount">
 
             <label class="form-label m-b-xs" for="savings-amount-total">
-              How much is this property worth?
+              How much savings do you have in total?
             </label>
 
             <div class="u-1/4-lap-and-up">
