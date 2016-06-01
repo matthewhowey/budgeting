@@ -227,19 +227,37 @@ module.exports = function (app) {
 
   // About you
   app.post('/beta08/about-you', function (req, res) {
-    res.redirect('/beta08/your-contact-details');
+    res.redirect('/beta08/your-address');
   });
   // About you (partner)
   app.post('/beta08/about-you-partner', function (req, res) {
-    res.redirect('/beta08/your-contact-details-partner');
+    res.redirect('/beta08/your-address-partner');
   });
 
-  // Your contact details
-  app.post('/beta08/your-contact-details', function (req, res) {
+  // Your address
+  app.post('/beta08/your-address', function (req, res) {
+    res.redirect('/beta08/your-contact-preferences');
+  });
+  // Your address (partner)
+  app.post('/beta08/your-address-partner', function (req, res) {
+    res.redirect('/beta08/your-contact-preferences-partner');
+  });
+
+  // Your contact preferences
+  app.post('/beta08/your-contact-preferences', function (req, res) {
+    res.redirect('/beta08/your-contact-text-updates');
+  });
+  // Your contact preferences (partner)
+  app.post('/beta08/your-contact-preferences-partner', function (req, res) {
+    res.redirect('/beta08/your-contact-text-updates-partner');
+  });
+
+  // Text updates
+  app.post('/beta08/your-contact-text-updates', function (req, res) {
     res.redirect('/beta08/savings-under63');
   });
-  // Your contact details (partner)
-  app.post('/beta08/your-contact-details-partner', function (req, res) {
+  // text updates (partner)
+  app.post('/beta08/your-contact-text-updates-partner', function (req, res) {
     res.redirect('/beta08/savings-under63-partner');
   });
 
