@@ -22,6 +22,7 @@ module.exports = {
     require('./routes-includes/beta05-routes.js')(app);
     require('./routes-includes/beta06-routes.js')(app);
     require('./routes-includes/beta07-routes.js')(app);
+    require('./routes-includes/beta08-routes.js')(app);
 
     // Include MVP routes
     require('./routes-includes/mvp01-routes.js')(app);
