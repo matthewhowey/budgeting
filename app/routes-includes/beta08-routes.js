@@ -19,7 +19,7 @@ module.exports = function (app) {
     if (req.body.pcbenefittype === 'pcbenefittype1') {
         res.redirect('/beta08/borrow-amount');
     } else if (req.body.pcbenefittype === 'pcbenefittype2') {
-        res.redirect('/beta08/not-eligible-current-benefits');
+        res.redirect('/beta08/not-eligible-pension-credit-length');
         // Income Support
     } else if (req.body.isbenefittype === 'isbenefittype1') {
         res.redirect('/beta08/borrow-amount');
