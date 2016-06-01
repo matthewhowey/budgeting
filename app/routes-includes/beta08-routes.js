@@ -116,10 +116,8 @@ module.exports = function (app) {
     });
 
     app.post('/beta08/jsa-benefit-type', function (req, res) {
-        if (req.body.duration === 'duration1') {
+        if (req.body.type === 'option1') {
             res.redirect('/beta08/borrow-amount');
-        } else if (req.body.duration === 'duration2') {
-            res.redirect('/beta08/not-eligible-current-benefits');
         }   else if (req.body.type === 'option2') {
             res.redirect('/beta08/not-eligible-current-benefits');
         } else if (req.body.type === 'option3') {
