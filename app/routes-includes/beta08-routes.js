@@ -24,10 +24,10 @@ module.exports = function (app) {
     } else if (req.body.isbenefittype === 'isbenefittype1') {
         res.redirect('/beta08/borrow-amount');
     } else if (req.body.isbenefittype === 'isbenefittype2') {
-        res.redirect('/beta08/not-eligible-current-benefits');
+        res.redirect('/beta08/not-eligible-income-support-length');
         // Employment and Support
     } else if (req.body.esabenefittype === 'esabenefittype2') {
-        res.redirect('/beta08/not-eligible-current-benefits');
+        res.redirect('/beta08/not-eligible-esa-length');
     } else if (req.body.esabenefittype === 'esabenefittype1') {
         res.redirect('/beta08/esa-budgeting-loan-before');
         // Job Seeker’s Allowance
@@ -36,7 +36,7 @@ module.exports = function (app) {
     } else if (req.body.jsabenefittype === 'jsabenefittype2') {
         res.redirect('/beta08/jsa-budgeting-loan-before');
     } else if (req.body.jsabenefittype === 'jsabenefittype3') {
-        res.redirect('/beta08/not-eligible-current-benefits');
+        res.redirect('/beta08/not-eligible-jsa-length');
         // None of the above
     } else {
         res.redirect('/beta08/not-eligible-current-benefits');
@@ -47,18 +47,18 @@ module.exports = function (app) {
     app.post('/beta08/esa-budgeting-loan-before', function (req, res) {
       if (req.body.esabenefitbefore === 'esabenefitbefore1') {
         res.redirect('/beta08/esa-change-of-circumstances');
-      } else {
-        res.redirect('/beta08/esa-activity-group');
-    }
-  });
+        } else {
+          res.redirect('/beta08/esa-activity-group');
+      }
+    });
 
     app.post('/beta08/esa-change-of-circumstances', function (req, res) {
       if (req.body.choice === 'yes') {
         res.redirect('/beta08/esa-activity-group');
-      } else {
-        res.redirect('/beta08/borrow-amount');
-    }
-  });
+        } else {
+          res.redirect('/beta08/borrow-amount');
+      }
+    });
 
   app.post('/beta08/esa-activity-group', function (req, res) {
     if (req.body.duration === 'duration1') {
@@ -72,7 +72,7 @@ module.exports = function (app) {
     if (req.body.esabenefittype === 'esabenefittype1') {
         res.redirect('/beta08/borrow-amount');
     } else if (req.body.esabenefittype === 'esabenefittype2') {
-        res.redirect('/beta08/not-eligible-current-benefits');
+        res.redirect('/beta08/not-eligible-esa-type');
     } else if (req.body.esabenefittype === 'esabenefittype3') {
         res.redirect('/beta08/not-sure-eligible-esa');
     }
@@ -119,7 +119,7 @@ module.exports = function (app) {
         if (req.body.type === 'option1') {
             res.redirect('/beta08/borrow-amount');
         }   else if (req.body.type === 'option2') {
-            res.redirect('/beta08/not-eligible-current-benefits');
+            res.redirect('/beta08/not-eligible-jsa-type');
         } else if (req.body.type === 'option3') {
             res.redirect('/beta08/not-sure-eligible-jsa');
         }
