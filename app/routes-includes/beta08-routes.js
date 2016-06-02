@@ -48,35 +48,27 @@ module.exports = function (app) {
       if (req.body.esabenefitbefore === 'esabenefitbefore1') {
         res.redirect('/beta08/esa-change-of-circumstances');
         } else {
-          res.redirect('/beta08/esa-activity-group');
+          res.redirect('/beta08/esa-benefit-type');
       }
     });
 
     app.post('/beta08/esa-change-of-circumstances', function (req, res) {
       if (req.body.choice === 'yes') {
-        res.redirect('/beta08/esa-activity-group');
+        res.redirect('/beta08/esa-benefit-type');
         } else {
           res.redirect('/beta08/borrow-amount');
       }
     });
 
-  app.post('/beta08/esa-activity-group', function (req, res) {
-    if (req.body.duration === 'duration1') {
-        res.redirect('/beta08/borrow-amount');
-    } else {
-      res.redirect('/beta08/esa-benefit-type');
-    }
-  });
-
-  app.post('/beta08/esa-benefit-type', function (req, res) {
-    if (req.body.esabenefittype === 'esabenefittype1') {
-        res.redirect('/beta08/borrow-amount');
-    } else if (req.body.esabenefittype === 'esabenefittype2') {
-        res.redirect('/beta08/not-eligible-esa-type');
-    } else if (req.body.esabenefittype === 'esabenefittype3') {
-        res.redirect('/beta08/not-sure-eligible-esa');
-    }
-  });
+    app.post('/beta08/esa-benefit-type', function (req, res) {
+      if (req.body.esabenefittype === 'esabenefittype1') {
+          res.redirect('/beta08/borrow-amount');
+      } else if (req.body.esabenefittype === 'esabenefittype2') {
+          res.redirect('/beta08/not-eligible-esa-type');
+      } else if (req.body.esabenefittype === 'esabenefittype3') {
+          res.redirect('/beta08/not-sure-eligible-esa');
+      }
+    });
 
     //Current Benefits JSA part
     app.post('/beta08/jsa-budgeting-loan-before', function (req, res) {
