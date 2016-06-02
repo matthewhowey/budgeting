@@ -91,7 +91,7 @@ module.exports = function (app) {
       if (req.body.choice === 'no') {
         res.redirect('/beta08/borrow-amount');
       } else if (req.body.duration === 'duration1') {
-          res.redirect('/beta08/not-eligible-current-benefits');
+          res.redirect('/beta08/not-eligible-jsa-worked');
         } else if (req.body.duration === 'duration2') {
           res.redirect('/beta08/jsa-partner');
       }
