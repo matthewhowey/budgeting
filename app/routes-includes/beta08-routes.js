@@ -20,24 +20,24 @@ module.exports = function (app) {
         res.redirect('/beta08/borrow-amount');
     } else if (req.body.pcbenefittype === 'pcbenefittype2') {
         res.redirect('/beta08/not-eligible-pension-credit-length');
-        // Income Support
+    // Income Support
     } else if (req.body.isbenefittype === 'isbenefittype1') {
         res.redirect('/beta08/borrow-amount');
     } else if (req.body.isbenefittype === 'isbenefittype2') {
         res.redirect('/beta08/not-eligible-income-support-length');
-        // Employment and Support
+    // Employment and Support
     } else if (req.body.esabenefittype === 'esabenefittype2') {
         res.redirect('/beta08/not-eligible-esa-length');
     } else if (req.body.esabenefittype === 'esabenefittype1') {
         res.redirect('/beta08/esa-budgeting-loan-before');
-        // Job Seeker’s Allowance
+    // Job Seeker’s Allowance
     } else if (req.body.jsabenefittype === 'jsabenefittype1') {
         res.redirect('/beta08/borrow-amount');
     } else if (req.body.jsabenefittype === 'jsabenefittype2') {
         res.redirect('/beta08/jsa-budgeting-loan-before');
     } else if (req.body.jsabenefittype === 'jsabenefittype3') {
         res.redirect('/beta08/not-eligible-jsa-length');
-        // None of the above
+    // None of the above
     } else {
         res.redirect('/beta08/not-eligible-current-benefits');
     }
@@ -75,7 +75,17 @@ module.exports = function (app) {
       if (req.body.esabenefitbefore === 'esabenefitbefore1') {
         res.redirect('/beta08/jsa-change-of-circumstances');
       } else {
-          res.redirect('/beta08/jsa-worked');
+        res.redirect('/beta08/jsa-partner');
+      }
+    });
+
+    app.post('/beta08/jsa-partner', function (req, res) {
+      if (req.body.option === 'option1') {
+        res.redirect('/beta08/borrow-amount');
+      } else if (req.body.option === 'option2') {
+        res.redirect('/beta08/not-eligible-jsa-partner-not-joint');
+      } else {
+        res.redirect('/beta08/jsa-worked');
       }
     });
 
@@ -88,33 +98,29 @@ module.exports = function (app) {
     });
 
     app.post('/beta08/jsa-worked', function (req, res) {
-      if (req.body.choice === 'no') {
+      if (req.body.choice === 'yes') {
+        res.redirect('/beta08/jsa-worked2');
+      } else {
         res.redirect('/beta08/borrow-amount');
-      } else if (req.body.duration === 'duration1') {
-          res.redirect('/beta08/not-eligible-jsa-worked');
-        } else if (req.body.duration === 'duration2') {
-          res.redirect('/beta08/jsa-partner');
       }
     });
 
-    app.post('/beta08/jsa-partner', function (req, res) {
-        if (req.body.choice === 'no') {
-            res.redirect('/beta08/borrow-amount');
-        } else if (req.body.duration === 'duration1') {
-                res.redirect('/beta08/jsa-benefit-type');
-        } else if (req.body.duration === 'duration2') {
-                    res.redirect('/beta08/borrow-amount');
-        }
+    app.post('/beta08/jsa-worked2', function (req, res) {
+      if (req.body.duration === 'duration1') {
+        res.redirect('/beta08/not-eligible-jsa-worked');
+      } else {
+        res.redirect('/beta08/borrow-amount');
+      }
     });
 
     app.post('/beta08/jsa-benefit-type', function (req, res) {
-        if (req.body.type === 'option1') {
-            res.redirect('/beta08/borrow-amount');
-        }   else if (req.body.type === 'option2') {
-            res.redirect('/beta08/not-eligible-jsa-type');
-        } else if (req.body.type === 'option3') {
-            res.redirect('/beta08/not-sure-eligible-jsa');
-        }
+      if (req.body.type === 'option1') {
+        res.redirect('/beta08/borrow-amount');
+      } else if (req.body.type === 'option2') {
+        res.redirect('/beta08/not-eligible-jsa-type');
+      } else if (req.body.type === 'option3') {
+        res.redirect('/beta08/not-sure-eligible-jsa');
+      }
     });
 
   // Borrow amount

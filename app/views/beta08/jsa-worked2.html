@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  Your partner - Budgeting Loans - GOV.UK
+  Work history - Budgeting Loans - GOV.UK
 {% endblock %}
 
 {% block content %}
@@ -15,7 +15,7 @@
 
       {# Back link #}
         {% import "includes/back-link.html" as back %}
-        {{ back.url('jsa-worked') }}
+        {{ back.url('jsa-budgeting-loan-before') }}
       {# Back link #}
 
       <form method="post" class="form">
@@ -24,10 +24,8 @@
           <span class="heading-secondary">
             Check your eligibility
           </span>
-          Do you have a partner?
+          Were you ever paid &pound;153 per week or more over the last 2 years
         </h1>
-
-        <p>A partner is someone you&rsquo;re married to or live with as if you&rsquo;re married to&nbsp;them.</p>
 
         <div class="form-group">
           <fieldset class="inline">
@@ -49,16 +47,16 @@
 
             <fieldset>
 
-              <legend class="m-b-s">Who&rsquo;s your Job Seeker&rsquo;s Allowance claim for?</legend>
+              <legend class="m-b-s">In how many weeks did you earn &pound;153 or more?</legend>
 
-              <label class="block-label" for="option1">
-                <input id="option1" type="radio" name="option" value="option1" >
-                Me and my partner
+              <label class="block-label" for="duration1">
+                <input id="duration1" type="radio" name="duration" value="duration1" >
+                26 weeks or more
               </label>
 
-              <label class="block-label" for="option2">
-                <input id="option2" type="radio" name="option" value="option2" >
-                Just me
+              <label class="block-label" for="duration2">
+                <input id="duration2" type="radio" name="duration" value="duration2" >
+                Less than 26 weeks
               </label>
 
             </fieldset>
