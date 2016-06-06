@@ -282,5 +282,22 @@ module.exports = function (app) {
     res.redirect('/beta08/what-happens-next');
   });
 
+  // Loan offer
+  app.post('/beta08/loan-offer-partial', function (req, res) {
+    if (req.body.choice === 'yes') {
+      res.redirect('/beta08/loan-offer-accept-partial');
+    } else if (req.body.choice === 'no') {
+      res.redirect('/beta08/loan-offer-reject-partial');
+    }
+  });
+
+  app.post('/beta08/loan-offer-full', function (req, res) {
+    if (req.body.choice === 'yes') {
+      res.redirect('/beta08/loan-offer-accept-full');
+    } else if (req.body.choice === 'no') {
+      res.redirect('/beta08/loan-offer-reject-full');
+    }
+  });
+
 // END OF BETA 08
 }
