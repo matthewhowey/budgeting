@@ -99,13 +99,13 @@ module.exports = function (app) {
 
     app.post('/beta08/jsa-worked', function (req, res) {
       if (req.body.choice === 'yes') {
-        res.redirect('/beta08/jsa-worked2');
+        res.redirect('/beta08/jsa-paid');
       } else {
         res.redirect('/beta08/borrow-amount');
       }
     });
 
-    app.post('/beta08/jsa-worked2', function (req, res) {
+    app.post('/beta08/jsa-paid', function (req, res) {
       if (req.body.duration === 'duration1') {
         res.redirect('/beta08/not-eligible-jsa-worked');
       } else {
