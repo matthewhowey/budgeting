@@ -114,7 +114,7 @@ module.exports = function (app) {
     });
 
     app.post('/beta08/jsa-worked', function (req, res) {
-      if (req.body.choice3morethan === 'more') {
+      if (req.body.choice3 === 'more') {
         res.redirect('/beta08/not-eligible-jsa-worked');
       } else {
         res.redirect('/beta08/borrow-amount');
