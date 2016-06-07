@@ -48,15 +48,31 @@ module.exports = function (app) {
       if (req.body.esabenefitbefore === 'esabenefitbefore1') {
         res.redirect('/beta08/esa-change-of-circumstances');
         } else {
-          res.redirect('/beta08/esa-benefit-type');
+          res.redirect('/beta08/esa-assessment');
       }
     });
 
     app.post('/beta08/esa-change-of-circumstances', function (req, res) {
       if (req.body.choice === 'yes') {
-        res.redirect('/beta08/esa-benefit-type');
+        res.redirect('/beta08/esa-assessment');
         } else {
           res.redirect('/beta08/borrow-amount');
+      }
+    });
+
+    app.post('/beta08/esa-assessment', function (req, res) {
+      if (req.body.option === 'yes') {
+          res.redirect('/beta08/esa-activity-group');
+      } else {
+          res.redirect('/beta08/esa-benefit-type');
+      }
+    });
+
+    app.post('/beta08/esa-activity-group', function (req, res) {
+      if (req.body.duration === 'duration1') {
+          res.redirect('/beta08/borrow-amount');
+      } else {
+        res.redirect('/beta08/esa-benefit-type');
       }
     });
 
