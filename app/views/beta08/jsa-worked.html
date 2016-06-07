@@ -24,20 +24,20 @@
           <span class="heading-secondary">
             Check your eligibility
           </span>
-          Have you worked for 26 weeks or more over the last 2 years?
+          Did you work between 6 April 2014 and 5 April 2016?
         </h1>
 
-        <div class="form-group">
+        <div class="form-group m-b-xs">
           <fieldset class="inline">
 
-            <legend class="visually-hidden">Have you worked over the last 2 years?</legend>
+            <legend class="visually-hidden">Did you work between 6 April 2014 and 5 April 2016?</legend>
 
-            <label class="block-label" data-target="savings-amount" for="savings-1">
-              <input id="savings-1" type="radio" name="choice" value="yes" >
+            <label class="block-label" for="choice-yes" data-target="pay">
+              <input id="choice-yes" type="radio" name="choice" value="yes" >
               Yes
             </label>
-            <label class="block-label" for="savings-2">
-              <input id="savings-2" type="radio" name="choice" value="no" >
+            <label class="block-label" for="choice-no">
+              <input id="choice-no" type="radio" name="choice" value="no" >
               No
             </label>
 
@@ -45,7 +45,47 @@
 
         </div>{# / form-group #}
 
-        <div class="form-group">
+        <div class="panel js-hidden panel-border-narrow" id="pay">
+
+          <fieldset class="inline">
+
+            <legend class="m-b-s">Were you ever paid &pound;153 per week or more during this time?</legend>
+
+            <label class="block-label" for="choice2-yes" data-target="time">
+              <input id="choice2-yes" type="radio" name="choice2" value="yes" >
+              Yes
+            </label>
+            <label class="block-label" for="choice2-no">
+              <input id="choice2-no" type="radio" name="choice2" value="no" >
+              No
+            </label>
+
+          </fieldset>
+
+          <div class="panel js-hidden panel-border-none" id="time">
+
+            <fieldset>
+
+              <legend class="m-b-s">How often did you earn &pound;153 per week or more?</legend>
+
+              <label class="block-label" for="choice3morethan">
+                <input id="choice3morethan" type="radio" name="choice3" value="more" >
+                26 weeks or more
+              </label>
+              <label class="block-label" for="choice3lessthan">
+                <input id="choice3lessthan" type="radio" name="choice3" value="less">
+                Less than 26 weeks
+              </label>
+
+            </fieldset>
+
+          </div>{# / panel #}
+
+        </div>{# / panel #}
+
+        
+
+        <div class="form-group m-t-l">
           <input class="button" type="submit" value="Continue">
         </div>{# / form-group #}
 

@@ -106,28 +106,28 @@ module.exports = function (app) {
     });
 
     app.post('/beta08/jsa-change-of-circumstances', function (req, res) {
-      if (req.body.choice === 'yes') {
-        res.redirect('/beta08/jsa-worked');
-      } else {
+      if (req.body.choice === 'no') {
+        res.redirect('/beta08/borrow-amount');
+      } else if (req.body.choice === 'no') {
         res.redirect('/beta08/borrow-amount');
       }
     });
 
     app.post('/beta08/jsa-worked', function (req, res) {
-      if (req.body.choice === 'yes') {
-        res.redirect('/beta08/jsa-paid');
-      } else {
-        res.redirect('/beta08/borrow-amount');
-      }
-    });
-
-    app.post('/beta08/jsa-paid', function (req, res) {
-      if (req.body.duration === 'duration1') {
+      if (req.body.choice3morethan === 'more') {
         res.redirect('/beta08/not-eligible-jsa-worked');
       } else {
         res.redirect('/beta08/borrow-amount');
       }
     });
+
+    // app.post('/beta08/jsa-paid', function (req, res) {
+    //   if (req.body.duration === 'duration1') {
+    //     res.redirect('/beta08/not-eligible-jsa-worked');
+    //   } else {
+    //     res.redirect('/beta08/borrow-amount');
+    //   }
+    // });
 
     app.post('/beta08/jsa-benefit-type', function (req, res) {
       if (req.body.type === 'option1') {
